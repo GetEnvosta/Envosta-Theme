@@ -37,7 +37,7 @@
               "fontFamily": "Playfair Display",
               "fontWeight": "400 700",
               "fontStyle": "normal",
-              "src": ["https://fonts.gstatic.com/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXBYf9lW4e_bXN.woff2"]
+              "src": ["file:./assets/fonts/PlayfairDisplay-Variable.woff2"]
             }
           ]
         },
@@ -48,9 +48,9 @@
           "fontFace": [
             {
               "fontFamily": "DM Sans",
-              "fontWeight": "400 500 600",
+              "fontWeight": "400 600",
               "fontStyle": "normal",
-              "src": ["https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriCZa4ET-DNl0.woff2"]
+              "src": ["file:./assets/fonts/DMSans-Variable.woff2"]
             }
           ]
         }

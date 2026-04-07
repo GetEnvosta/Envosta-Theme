@@ -19,7 +19,8 @@ function envosta_theme_setup() {
 add_action( 'after_setup_theme', 'envosta_theme_setup' );
 
 /**
- * Register custom pattern category for Envosta sections
+ * Register custom pattern category for Envosta sections.
+ * The plugin registers patterns — the theme just provides the category.
  */
 function envosta_register_pattern_categories() {
     register_block_pattern_category( 'envosta-sections', [
@@ -27,30 +28,6 @@ function envosta_register_pattern_categories() {
     ] );
 }
 add_action( 'init', 'envosta_register_pattern_categories' );
-
-/**
- * Get Envosta site config from WP option.
- *
- * @param string|null $section Optional section key (e.g. 'content', 'business', 'colors').
- * @return array Config array or specific section. Empty array if no config set.
- */
-function envosta_get_config( $section = null ) {
-    $config = get_option( 'envosta_site_config', [] );
-
-    if ( is_string( $config ) ) {
-        $config = json_decode( $config, true );
-    }
-
-    if ( ! is_array( $config ) ) {
-        $config = [];
-    }
-
-    if ( $section !== null ) {
-        return $config[ $section ] ?? [];
-    }
-
-    return $config;
-}
 
 /**
  * GitHub Theme Auto-Updater
