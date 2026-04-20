@@ -21,8 +21,8 @@
 
 			<!-- wp:column {"verticalAlignment":"stretch","width":"55%"} -->
 			<div class="wp-block-column is-vertically-aligned-stretch" style="flex-basis:55%">
-				<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"},"background":{"backgroundImage":{"url":"data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1000 750%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fef3c7%27/%3E%3Cstop offset=%2750%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23f59e0b%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%271000%27 height=%27750%27 fill=%27url(%23g)%27/%3E%3Ccircle cx=%27300%27 cy=%27280%27 r=%27160%27 fill=%27%23ffffff%27 opacity=%270.35%27/%3E%3Crect x=%27520%27 y=%27420%27 width=%27320%27 height=%27200%27 rx=%2720%27 fill=%27%23ffffff%27 opacity=%270.25%27/%3E%3C/svg%3E","source":"file"},"backgroundSize":"cover","backgroundPosition":"50% 50%"}}} -->
-				<div class="wp-block-group has-background" style="aspect-ratio:4/3;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1000 750%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fef3c7%27/%3E%3Cstop offset=%2750%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23f59e0b%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%271000%27 height=%27750%27 fill=%27url(%23g)%27/%3E%3Ccircle cx=%27300%27 cy=%27280%27 r=%27160%27 fill=%27%23ffffff%27 opacity=%270.35%27/%3E%3Crect x=%27520%27 y=%27420%27 width=%27320%27 height=%27200%27 rx=%2720%27 fill=%27%23ffffff%27 opacity=%270.25%27/%3E%3C/svg%3E');background-size:cover;background-position:50% 50%;height:100%"></div>
+				<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"}},"backgroundColor":"accent-soft"} -->
+				<div class="wp-block-group has-accent-soft-background-color has-background" style="aspect-ratio:4/3;height:100%"></div>
 				<!-- /wp:group -->
 			</div>
 			<!-- /wp:column -->
@@ -45,10 +45,10 @@
 				<p class="has-accent-color has-text-color" style="margin-bottom:1.75rem;font-size:0.9rem;font-weight:600"><a href="#" style="color:inherit;text-decoration:none"><?php esc_html_e( 'Read article →', 'envosta' ); ?></a></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem","padding":{"top":"1.25rem"}},"border":{"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:1.25rem">
-					<!-- wp:group {"style":{"dimensions":{"width":"2rem","height":"2rem"},"border":{"radius":"9999px"},"background":{"backgroundImage":{"url":"data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Cdefs%3E%3ClinearGradient id=%27a%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23a78bfa%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2764%27 height=%2764%27 fill=%27url(%23a)%27/%3E%3C/svg%3E","source":"file"},"backgroundSize":"cover"}},"layout":{"type":"constrained"}} -->
-					<div class="wp-block-group has-background" style="border-radius:9999px;width:2rem;height:2rem;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Cdefs%3E%3ClinearGradient id=%27a%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23a78bfa%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2764%27 height=%2764%27 fill=%27url(%23a)%27/%3E%3C/svg%3E');background-size:cover"></div>
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem","padding":{"top":"1.25rem"}},"border":{"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:1.25rem;align-items:center">
+					<!-- wp:group {"style":{"border":{"radius":"9999px"}},"backgroundColor":"accent","layout":{"type":"constrained"}} -->
+						<div class="wp-block-group has-accent-background-color has-background" style="border-radius:9999px;width:2rem;height:2rem"></div>
 					<!-- /wp:group -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"500"}}} -->
 					<p style="font-size:0.85rem;font-weight:500"><?php esc_html_e( 'Marta Liang', 'envosta' ); ?></p>

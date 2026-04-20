@@ -47,8 +47,8 @@ $envosta_trio = array(
 		<?php foreach ( $envosta_trio as $item ) : ?>
 		<!-- wp:column {"className":"envosta-card envosta-card-hover envosta-reveal","style":{"spacing":{"padding":{"top":"2.25rem","right":"2rem","bottom":"2.25rem","left":"2rem"}},"border":{"radius":"16px","width":"1px"}},"borderColor":"border"} -->
 		<div class="wp-block-column envosta-card envosta-card-hover envosta-reveal has-border-color has-border-border-color" style="border-width:1px;border-radius:16px;padding:2.25rem 2rem">
-			<!-- wp:group {"style":{"dimensions":{"width":"2.75rem","height":"2.75rem"},"spacing":{"margin":{"bottom":"1.5rem"}},"border":{"radius":"10px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-			<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:10px;margin-bottom:1.5rem;width:2.75rem;height:2.75rem">
+			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"1.5rem"}},"border":{"radius":"10px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+			<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:10px;margin-bottom:1.5rem;width:2.75rem;height:2.75rem;align-items:center">
 				<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","fontWeight":"600"}},"textColor":"accent"} -->
 				<p class="has-text-align-center has-accent-color has-text-color" style="font-size:1.25rem;font-weight:600"><?php echo esc_html( $item['icon'] ); ?></p>
 				<!-- /wp:paragraph -->

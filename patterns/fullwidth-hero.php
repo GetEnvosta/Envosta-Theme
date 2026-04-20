@@ -7,8 +7,8 @@
  * Viewport Width: 1440
  */
 ?>
-<!-- wp:group {"align":"full","className":"envosta-hero envosta-reveal","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","right":"2rem","left":"2rem"}},"minHeight":"88vh","color":{"background":"linear-gradient(135deg, #1e1b4b 0%, #4c1d95 35%, #6d28d9 65%, #2563eb 100%)","text":"#ffffff"}},"layout":{"type":"constrained","contentSize":"880px"}} -->
-<div class="wp-block-group alignfull envosta-hero envosta-reveal has-text-color has-background" style="background:linear-gradient(135deg, #1e1b4b 0%, #4c1d95 35%, #6d28d9 65%, #2563eb 100%);color:#ffffff;min-height:88vh;padding-top:10rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem">
+<!-- wp:group {"align":"full","className":"envosta-hero envosta-reveal","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","right":"2rem","left":"2rem"}},"dimensions":{"minHeight":"88vh"}},"backgroundColor":"contrast","layout":{"type":"constrained","contentSize":"880px"}} -->
+<div class="wp-block-group alignfull envosta-hero envosta-reveal has-contrast-background-color has-background" style="background:linear-gradient(135deg, #1e1b4b 0%, #4c1d95 35%, #6d28d9 65%, #2563eb 100%);color:#ffffff;min-height:88vh;padding-top:10rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem">
 
 	<!-- wp:paragraph {"align":"center","className":"envosta-eyebrow","style":{"typography":{"fontSize":"0.78rem","letterSpacing":"0.18em","textTransform":"uppercase","fontWeight":"600"},"color":{"text":"#c4b5fd"},"spacing":{"margin":{"bottom":"1.75rem"}}}} -->
 	<p class="has-text-align-center envosta-eyebrow has-text-color" style="color:#c4b5fd;margin-bottom:1.75rem;font-size:0.78rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase"><?php esc_html_e( 'Payments infrastructure for the modern internet', 'envosta' ); ?></p>

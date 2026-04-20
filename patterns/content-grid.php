@@ -37,8 +37,8 @@ $envosta_posts = array(
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","right":"2rem","bottom":"6rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group alignfull" style="padding-top:6rem;padding-right:2rem;padding-bottom:6rem;padding-left:2rem">
 
-	<!-- wp:group {"className":"envosta-reveal","style":{"spacing":{"margin":{"bottom":"3.5rem"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"bottom"}} -->
-	<div class="wp-block-group envosta-reveal" style="margin-bottom:3.5rem">
+	<!-- wp:group {"className":"envosta-reveal","style":{"spacing":{"margin":{"bottom":"3.5rem"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<div class="wp-block-group envosta-reveal" style="margin-bottom:3.5rem;align-items:flex-end">
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"envosta-eyebrow","style":{"typography":{"fontSize":"0.78rem","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"accent"} -->
@@ -58,15 +58,15 @@ $envosta_posts = array(
 	<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
 	<div class="wp-block-columns">
 		<?php foreach ( $envosta_posts as $post ) : ?>
-		<!-- wp:column {"className":"envosta-card envosta-card-hover envosta-reveal","style":{"spacing":{"padding":"0"},"border":{"radius":"12px","width":"1px"},"color":{"background":"var:preset|color|base"}},"borderColor":"border"} -->
-		<div class="wp-block-column envosta-card envosta-card-hover envosta-reveal has-border-color has-border-border-color has-background" style="border-width:1px;border-radius:12px;background-color:var(--wp--preset--color--base);padding:0;overflow:hidden">
-			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"16/10"},"color":{"background":"<?php echo esc_attr( $post['gradient'] ); ?>"}}} -->
-			<div class="wp-block-group has-background" style="background:<?php echo esc_attr( $post['gradient'] ); ?>;aspect-ratio:16/10"></div>
+		<!-- wp:column {"className":"envosta-card envosta-card-hover envosta-reveal","style":{"spacing":{"padding":"0"},"border":{"radius":"12px","width":"1px"}},"backgroundColor":"base","borderColor":"border"} -->
+		<div class="wp-block-column envosta-card envosta-card-hover envosta-reveal has-border-color has-base-background-color has-border-border-color has-background" style="border-width:1px;border-radius:12px;padding:0;overflow:hidden">
+			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"16/10"}}} -->
+			<div class="wp-block-group" style="background:<?php echo esc_attr( $post['gradient'] ); ?>;aspect-ratio:16/10"></div>
 			<!-- /wp:group -->
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","right":"1.75rem","bottom":"1.75rem","left":"1.75rem"},"blockGap":"0.625rem"}}} -->
 			<div class="wp-block-group" style="padding:1.5rem 1.75rem 1.75rem">
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:center">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.7rem","fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"},"spacing":{"padding":{"top":"0.25rem","bottom":"0.25rem","left":"0.625rem","right":"0.625rem"}},"border":{"radius":"9999px"}},"backgroundColor":"base-2"} -->
 					<p class="has-base-2-background-color has-background" style="border-radius:9999px;padding-top:0.25rem;padding-right:0.625rem;padding-bottom:0.25rem;padding-left:0.625rem;font-size:0.7rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase"><?php echo esc_html( $post['tag'] ); ?></p>
 					<!-- /wp:paragraph -->

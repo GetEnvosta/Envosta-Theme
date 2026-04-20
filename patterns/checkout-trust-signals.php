@@ -32,10 +32,10 @@ $envosta_signals = array(
 		<?php foreach ( $envosta_signals as $signal ) : ?>
 		<!-- wp:column {"className":"envosta-card","style":{"border":{"radius":"14px","width":"1px"},"spacing":{"padding":{"top":"1.25rem","right":"1.25rem","bottom":"1.25rem","left":"1.25rem"}}},"borderColor":"border"} -->
 		<div class="wp-block-column envosta-card has-border-color has-border-border-color" style="border-width:1px;border-radius:14px;padding:1.25rem">
-			<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-			<div class="wp-block-group">
-				<!-- wp:group {"style":{"dimensions":{"width":"2.5rem","height":"2.5rem"},"border":{"radius":"10px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-				<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:10px;width:2.5rem;height:2.5rem;flex-shrink:0">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="align-items:flex-start">
+				<!-- wp:group {"style":{"border":{"radius":"10px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+				<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:10px;width:2.5rem;height:2.5rem;flex-shrink:0;align-items:center">
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.1rem"}}} -->
 					<p class="has-text-align-center" style="font-size:1.1rem"><?php echo esc_html( $signal['icon'] ); ?></p>
 					<!-- /wp:paragraph -->

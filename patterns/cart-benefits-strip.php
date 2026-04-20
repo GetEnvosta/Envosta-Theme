@@ -21,8 +21,8 @@ $envosta_benefits = array(
 		<?php foreach ( $envosta_benefits as $benefit ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"blockGap":"0.625rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center","justifyContent":"center"}} -->
-			<div class="wp-block-group">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"0.625rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+			<div class="wp-block-group" style="align-items:center">
 				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem","fontWeight":"700"}},"textColor":"accent"} -->
 				<p class="has-accent-color has-text-color" style="font-size:0.95rem;font-weight:700"><?php echo esc_html( $benefit['icon'] ); ?></p>
 				<!-- /wp:paragraph -->

@@ -37,10 +37,10 @@ $envosta_badges = array(
 		<?php foreach ( $envosta_badges as $badge ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group">
-				<!-- wp:group {"style":{"dimensions":{"width":"2.25rem","height":"2.25rem"},"border":{"radius":"8px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-				<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:8px;width:2.25rem;height:2.25rem">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="align-items:center">
+				<!-- wp:group {"style":{"border":{"radius":"8px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+				<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:8px;width:2.25rem;height:2.25rem;align-items:center">
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.95rem"}}} -->
 					<p class="has-text-align-center" style="font-size:0.95rem"><?php echo esc_html( $badge['icon'] ); ?></p>
 					<!-- /wp:paragraph -->

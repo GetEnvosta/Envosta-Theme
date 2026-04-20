@@ -62,8 +62,8 @@
 
 		<!-- wp:column {"verticalAlignment":"center","width":"52%","className":"envosta-reveal"} -->
 		<div class="wp-block-column is-vertically-aligned-center envosta-reveal" style="flex-basis:52%">
-			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"},"border":{"radius":"16px"},"background":{"backgroundImage":{"url":"data:image/svg+xml;utf8,%3Csvg xmlns=\u0027http://www.w3.org/2000/svg\u0027 viewBox=\u00270 0 800 600\u0027%3E%3Cdefs%3E%3ClinearGradient id=\u0027g\u0027 x1=\u00270%25\u0027 y1=\u00270%25\u0027 x2=\u0027100%25\u0027 y2=\u0027100%25\u0027%3E%3Cstop offset=\u00270%25\u0027 stop-color=\u0027%23eef2f7\u0027/%3E%3Cstop offset=\u0027100%25\u0027 stop-color=\u0027%23cbd5e1\u0027/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\u0027800\u0027 height=\u0027600\u0027 fill=\u0027url(%23g)\u0027/%3E%3Crect x=\u0027100\u0027 y=\u0027100\u0027 width=\u0027600\u0027 height=\u0027400\u0027 rx=\u002716\u0027 fill=\u0027%23ffffff\u0027 opacity=\u00270.6\u0027/%3E%3C/svg%3E","source":"file"},"backgroundSize":"cover"}}} -->
-			<div class="wp-block-group has-background" style="border-radius:16px;aspect-ratio:4/3;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 800 600%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23eef2f7%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23cbd5e1%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27800%27 height=%27600%27 fill=%27url(%23g)%27/%3E%3Crect x=%27100%27 y=%27100%27 width=%27600%27 height=%27400%27 rx=%2716%27 fill=%27%23ffffff%27 opacity=%270.6%27/%3E%3C/svg%3E');background-size:cover"></div>
+			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"},"border":{"radius":"16px"}},"backgroundColor":"base-2"} -->
+			<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:16px;aspect-ratio:4/3"></div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->

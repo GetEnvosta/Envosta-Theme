@@ -65,8 +65,8 @@ $envosta_benefits = array(
 		<?php foreach ( $envosta_benefits as $benefit ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-			<div class="wp-block-group">
+			<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="align-items:center">
 				<!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem"}},"textColor":"accent"} -->
 				<p class="has-accent-color has-text-color" style="font-size:1.25rem"><?php echo esc_html( $benefit['icon'] ); ?></p>
 				<!-- /wp:paragraph -->

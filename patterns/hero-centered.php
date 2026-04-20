@@ -7,13 +7,13 @@
  * Viewport Width: 1440
  */
 ?>
-<!-- wp:group {"align":"full","className":"envosta-hero envosta-reveal","style":{"spacing":{"padding":{"top":"9rem","bottom":"7rem","right":"2rem","left":"2rem"}},"minHeight":"90vh"},"layout":{"type":"constrained","contentSize":"820px"}} -->
+<!-- wp:group {"align":"full","className":"envosta-hero envosta-reveal","style":{"spacing":{"padding":{"top":"9rem","bottom":"7rem","right":"2rem","left":"2rem"}},"dimensions":{"minHeight":"90vh"}},"layout":{"type":"constrained","contentSize":"820px"}} -->
 <div class="wp-block-group alignfull envosta-hero envosta-reveal" style="min-height:90vh;padding-top:9rem;padding-right:2rem;padding-bottom:7rem;padding-left:2rem">
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2rem"},"padding":{"top":"0.375rem","right":"0.875rem","bottom":"0.375rem","left":"0.5rem"}},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
-	<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;margin-bottom:2rem;padding-top:0.375rem;padding-right:0.875rem;padding-bottom:0.375rem;padding-left:0.5rem">
-		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.7rem","fontWeight":"600","letterSpacing":"0.02em"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"0.625rem","right":"0.625rem"}},"color":{"background":"#1a1a1a","text":"#ffffff"},"border":{"radius":"9999px"}}} -->
-		<p class="has-text-color has-background" style="border-radius:9999px;color:#ffffff;background-color:#1a1a1a;padding-top:0.2rem;padding-right:0.625rem;padding-bottom:0.2rem;padding-left:0.625rem;font-size:0.7rem;font-weight:600;letter-spacing:0.02em"><?php esc_html_e( 'NEW', 'envosta' ); ?></p>
+	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"2rem"},"padding":{"top":"0.375rem","right":"0.875rem","bottom":"0.375rem","left":"0.5rem"}},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+	<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;margin-bottom:2rem;padding-top:0.375rem;padding-right:0.875rem;padding-bottom:0.375rem;padding-left:0.5rem;align-items:center">
+		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.7rem","fontWeight":"600","letterSpacing":"0.02em"},"spacing":{"padding":{"top":"0.2rem","bottom":"0.2rem","left":"0.625rem","right":"0.625rem"}},"border":{"radius":"9999px"}}} -->
+		<p style="border-radius:9999px;color:#ffffff;background-color:#1a1a1a;padding-top:0.2rem;padding-right:0.625rem;padding-bottom:0.2rem;padding-left:0.625rem;font-size:0.7rem;font-weight:600;letter-spacing:0.02em"><?php esc_html_e( 'NEW', 'envosta' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"500"}}} -->
 		<p style="font-size:0.85rem;font-weight:500"><?php esc_html_e( 'Introducing our new platform →', 'envosta' ); ?></p>
@@ -40,8 +40,8 @@
 	</div>
 	<!-- /wp:buttons -->
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"top":"4rem"},"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","verticalAlignment":"center"}} -->
-	<div class="wp-block-group" style="margin-top:4rem">
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"4rem"},"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+	<div class="wp-block-group" style="margin-top:4rem;align-items:center">
 		<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem","letterSpacing":"0.05em"},"color":{"text":"#f5b50a"}}} -->
 		<p class="has-text-color" style="color:#f5b50a;font-size:1rem;letter-spacing:0.05em">★★★★★</p>
 		<!-- /wp:paragraph -->

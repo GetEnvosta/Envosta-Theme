@@ -18,10 +18,10 @@ $envosta_filters = array(
 <!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"5rem","right":"2rem","bottom":"2.5rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->
 <div class="wp-block-group alignfull envosta-reveal" style="padding-top:5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group" style="align-items:flex-end">
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":"0.625rem"},"dimensions":{"minHeight":""}},"layout":{"type":"flex","orientation":"vertical"}} -->
+		<!-- wp:group {"style":{"spacing":{"blockGap":"0.625rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"envosta-eyebrow","style":{"typography":{"fontSize":"0.78rem","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"accent"} -->
 			<p class="envosta-eyebrow has-accent-color has-text-color" style="font-size:0.78rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase"><?php esc_html_e( 'Shop', 'envosta' ); ?></p>
@@ -35,12 +35,12 @@ $envosta_filters = array(
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
-		<div class="wp-block-group">
+		<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group" style="align-items:center">
 			<?php foreach ( $envosta_filters as $filter ) : ?>
 				<?php if ( ! empty( $filter['active'] ) ) : ?>
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"600"},"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"1rem"}},"border":{"radius":"9999px"},"color":{"background":"var:preset|color|contrast","text":"var:preset|color|base"}}} -->
-					<p class="has-text-color has-background" style="border-radius:9999px;color:var(--wp--preset--color--base);background-color:var(--wp--preset--color--contrast);padding:0.5rem 1rem;font-size:0.85rem;font-weight:600"><a href="#" style="color:inherit;text-decoration:none"><?php echo esc_html( $filter['label'] ); ?></a></p>
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"600"},"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"1rem"}},"border":{"radius":"9999px"}},"backgroundColor":"contrast","textColor":"base"} -->
+					<p class="has-base-color has-contrast-background-color has-text-color has-background" style="border-radius:9999px;padding:0.5rem 1rem;font-size:0.85rem;font-weight:600"><a href="#" style="color:inherit;text-decoration:none"><?php echo esc_html( $filter['label'] ); ?></a></p>
 					<!-- /wp:paragraph -->
 				<?php else : ?>
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"500"},"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"1rem"}},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border"} -->

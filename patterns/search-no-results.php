@@ -13,8 +13,8 @@
 	<!-- wp:group {"className":"envosta-card envosta-reveal","style":{"spacing":{"padding":{"top":"3.5rem","right":"3rem","bottom":"3.5rem","left":"3rem"}},"border":{"radius":"16px","width":"1px"}},"borderColor":"border","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group envosta-card envosta-reveal has-border-color has-border-border-color" style="border-width:1px;border-radius:16px;padding:3.5rem 3rem">
 
-		<!-- wp:group {"style":{"dimensions":{"width":"3rem","height":"3rem"},"spacing":{"margin":{"bottom":"1.5rem"}},"border":{"radius":"9999px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-		<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:9999px;margin-bottom:1.5rem;width:3rem;height:3rem">
+		<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"1.5rem"}},"border":{"radius":"9999px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:9999px;margin-bottom:1.5rem;width:3rem;height:3rem;align-items:center">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","fontWeight":"700"}},"textColor":"accent"} -->
 			<p class="has-text-align-center has-accent-color has-text-color" style="font-size:1.25rem;font-weight:700"><?php echo esc_html( '·' ); ?></p>
 			<!-- /wp:paragraph -->

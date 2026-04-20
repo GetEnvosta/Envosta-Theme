@@ -18,8 +18,8 @@
 	<h2 class="wp-block-heading has-text-align-center" style="margin-bottom:3rem;font-size:clamp(2rem, 4.5vw, 3.5rem);font-style:italic;font-weight:500;letter-spacing:-0.02em;line-height:1.25"><?php esc_html_e( 'Design is not how it looks. It is the way your customer understands, at a glance, that you give a damn.', 'envosta' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:separator {"className":"is-style-wide","style":{"spacing":{"margin":{"top":"0","bottom":"2rem"}},"color":{"background":"var:preset|color|border"}}} -->
-	<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:var(--wp--preset--color--border);margin-top:0;margin-bottom:2rem"/>
+	<!-- wp:separator {"className":"is-style-wide","style":{"spacing":{"margin":{"top":"0","bottom":"2rem"}}},"backgroundColor":"border"} -->
+	<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-border-background-color has-background is-style-wide" style="margin-top:0;margin-bottom:2rem"/>
 	<!-- /wp:separator -->
 
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1rem","fontWeight":"600","letterSpacing":"-0.005em"}}} -->

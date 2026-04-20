@@ -10,8 +10,8 @@
 <!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"7rem","right":"2rem","bottom":"4rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group alignfull envosta-reveal" style="padding-top:7rem;padding-right:2rem;padding-bottom:4rem;padding-left:2rem">
 
-	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"1.5rem"},"blockGap":"1rem"},"border":{"bottom":{"color":"var:preset|color|border","width":"1px"},"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center"}} -->
-	<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;border-bottom-color:var(--wp--preset--color--border);border-bottom-width:1px;margin-bottom:1.5rem;padding:0.875rem 0">
+	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"1.5rem"},"blockGap":"1rem"},"border":{"bottom":{"color":"var:preset|color|border","width":"1px"},"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"flex","justifyContent":"space-between"}} -->
+	<div class="wp-block-group" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;border-bottom-color:var(--wp--preset--color--border);border-bottom-width:1px;margin-bottom:1.5rem;padding:0.875rem 0;align-items:center">
 		<!-- wp:paragraph {"className":"envosta-eyebrow","style":{"typography":{"fontSize":"0.72rem","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"700"}}} -->
 		<p class="envosta-eyebrow" style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase"><?php esc_html_e( 'Issue 012 — Spring 2026', 'envosta' ); ?></p>
 		<!-- /wp:paragraph -->

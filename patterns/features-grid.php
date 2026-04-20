@@ -16,8 +16,8 @@ $envosta_grid = array(
 	array( 'title' => __( 'Future proof', 'envosta' ),        'body' => __( 'Native FSE blocks and standards-first code so your site still runs in five years.', 'envosta' ) ),
 );
 ?>
-<!-- wp:group {"align":"full","className":"is-style-envosta-section-soft","style":{"spacing":{"padding":{"top":"6rem","right":"2rem","bottom":"6rem","left":"2rem"}},"color":{"background":"var:preset|color|base-2"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
-<div class="wp-block-group alignfull is-style-envosta-section-soft has-background" style="background-color:var(--wp--preset--color--base-2);padding-top:6rem;padding-right:2rem;padding-bottom:6rem;padding-left:2rem">
+<!-- wp:group {"align":"full","className":"is-style-envosta-section-soft","style":{"spacing":{"padding":{"top":"6rem","right":"2rem","bottom":"6rem","left":"2rem"}}},"backgroundColor":"base-2","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull is-style-envosta-section-soft has-base-2-background-color has-background" style="padding-top:6rem;padding-right:2rem;padding-bottom:6rem;padding-left:2rem">
 
 	<!-- wp:group {"className":"envosta-reveal","style":{"spacing":{"margin":{"bottom":"4rem"},"blockGap":"0.75rem"}},"layout":{"type":"constrained","contentSize":"680px"}} -->
 	<div class="wp-block-group envosta-reveal" style="margin-bottom:4rem">
@@ -39,8 +39,8 @@ $envosta_grid = array(
 		<!-- wp:column {"style":{"spacing":{"blockGap":"1.25rem"}}} -->
 		<div class="wp-block-column">
 			<?php for ( $row = 0; $row < 2; $row++ ) : $i = $col + ( $row * 3 ); $num = str_pad( $i + 1, 2, '0', STR_PAD_LEFT ); ?>
-			<!-- wp:group {"className":"envosta-reveal envosta-card-hover","style":{"spacing":{"padding":{"top":"1.75rem","right":"1.75rem","bottom":"1.75rem","left":"1.75rem"}},"border":{"radius":"12px","width":"1px"},"color":{"background":"var:preset|color|base"}},"borderColor":"border"} -->
-			<div class="wp-block-group envosta-reveal envosta-card-hover has-border-color has-border-border-color has-background" style="border-width:1px;border-radius:12px;background-color:var(--wp--preset--color--base);padding:1.75rem">
+			<!-- wp:group {"className":"envosta-reveal envosta-card-hover","style":{"spacing":{"padding":{"top":"1.75rem","right":"1.75rem","bottom":"1.75rem","left":"1.75rem"}},"border":{"radius":"12px","width":"1px"}},"backgroundColor":"base","borderColor":"border"} -->
+			<div class="wp-block-group envosta-reveal envosta-card-hover has-border-color has-base-background-color has-border-border-color has-background" style="border-width:1px;border-radius:12px;padding:1.75rem">
 				<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.7rem","fontWeight":"700","letterSpacing":"0.08em"},"spacing":{"margin":{"bottom":"0.75rem"}}},"textColor":"accent"} -->
 				<p class="has-accent-color has-text-color" style="margin-bottom:0.75rem;font-size:0.7rem;font-weight:700;letter-spacing:0.08em"><?php echo esc_html( $num ); ?></p>
 				<!-- /wp:paragraph -->

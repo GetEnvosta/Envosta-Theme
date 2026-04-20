@@ -7,8 +7,8 @@
  * Viewport Width: 1440
  */
 ?>
-<!-- wp:group {"align":"full","className":"envosta-hero","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","right":"2rem","left":"2rem"}},"minHeight":"92vh","color":{"background":"linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #334155 100%)","text":"#ffffff"}},"layout":{"type":"constrained","contentSize":"860px"}} -->
-<div class="wp-block-group alignfull envosta-hero has-text-color has-background" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #334155 100%);color:#ffffff;min-height:92vh;padding-top:10rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem">
+<!-- wp:group {"align":"full","className":"envosta-hero","style":{"spacing":{"padding":{"top":"10rem","bottom":"10rem","right":"2rem","left":"2rem"}},"dimensions":{"minHeight":"92vh"}},"backgroundColor":"contrast","layout":{"type":"constrained","contentSize":"860px"}} -->
+<div class="wp-block-group alignfull envosta-hero has-contrast-background-color has-background" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #334155 100%);color:#ffffff;min-height:92vh;padding-top:10rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem">
 
 	<!-- wp:paragraph {"align":"center","className":"envosta-eyebrow","style":{"typography":{"fontSize":"0.78rem","letterSpacing":"0.16em","textTransform":"uppercase","fontWeight":"600"},"color":{"text":"#a78bfa"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
 	<p class="has-text-align-center envosta-eyebrow has-text-color" style="color:#a78bfa;margin-bottom:1.5rem;font-size:0.78rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( '— The new standard', 'envosta' ); ?></p>

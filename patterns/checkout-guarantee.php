@@ -10,11 +10,11 @@
 <!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"3rem","right":"2rem","bottom":"3rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"1100px"}} -->
 <div class="wp-block-group alignfull envosta-reveal" style="padding-top:3rem;padding-right:2rem;padding-bottom:3rem;padding-left:2rem">
 
-	<!-- wp:group {"className":"envosta-card","style":{"spacing":{"padding":{"top":"1.75rem","right":"2rem","bottom":"1.75rem","left":"2rem"},"blockGap":"1.25rem"},"border":{"radius":"16px","width":"1px"}},"backgroundColor":"base-2","borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-	<div class="wp-block-group envosta-card has-border-color has-border-border-color has-base-2-background-color has-background" style="border-width:1px;border-radius:16px;padding:1.75rem 2rem">
+	<!-- wp:group {"className":"envosta-card","style":{"spacing":{"padding":{"top":"1.75rem","right":"2rem","bottom":"1.75rem","left":"2rem"},"blockGap":"1.25rem"},"border":{"radius":"16px","width":"1px"}},"backgroundColor":"base-2","borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group envosta-card has-border-color has-border-border-color has-base-2-background-color has-background" style="border-width:1px;border-radius:16px;padding:1.75rem 2rem;align-items:center">
 
-		<!-- wp:group {"style":{"dimensions":{"width":"3rem","height":"3rem"},"border":{"radius":"12px"},"color":{"background":"var:preset|color|base"}},"layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-		<div class="wp-block-group has-background" style="border-radius:12px;background-color:var(--wp--preset--color--base);width:3rem;height:3rem;flex-shrink:0">
+		<!-- wp:group {"style":{"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-group has-base-background-color has-background" style="border-radius:12px;width:3rem;height:3rem;flex-shrink:0;align-items:center">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.3rem"}}} -->
 			<p class="has-text-align-center" style="font-size:1.3rem">🛡️</p>
 			<!-- /wp:paragraph -->

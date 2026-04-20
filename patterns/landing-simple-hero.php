@@ -26,9 +26,9 @@
 	<p class="has-text-align-center has-muted-color has-text-color" style="margin-right:auto;margin-bottom:2.5rem;margin-left:auto;font-size:1.2rem;line-height:1.6"><?php esc_html_e( 'One clean screen. Send, track, and get paid — without the spreadsheet duct tape.', 'envosta' ); ?></p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.3rem","right":"0.3rem","bottom":"0.3rem","left":"1.25rem"},"margin":{"left":"auto","right":"auto"}},"border":{"radius":"9999px","width":"1px"},"dimensions":{"maxWidth":"460px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-	<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;margin-right:auto;margin-left:auto;max-width:460px;padding-top:0.3rem;padding-right:0.3rem;padding-bottom:0.3rem;padding-left:1.25rem">
-		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem"},"layout":{"selfStretch":"fill","flexSize":null}},"textColor":"muted"} -->
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.3rem","right":"0.3rem","bottom":"0.3rem","left":"1.25rem"},"margin":{"left":"auto","right":"auto"}},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;margin-right:auto;margin-left:auto;max-width:460px;padding-top:0.3rem;padding-right:0.3rem;padding-bottom:0.3rem;padding-left:1.25rem;align-items:center">
+		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.95rem"}},"textColor":"muted"} -->
 		<p class="has-muted-color has-text-color" style="font-size:0.95rem"><?php esc_html_e( 'your@email.com', 'envosta' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:buttons -->

@@ -14,8 +14,8 @@
 
 		<!-- wp:column {"verticalAlignment":"center","width":"52%","className":"envosta-reveal"} -->
 		<div class="wp-block-column is-vertically-aligned-center envosta-reveal" style="flex-basis:52%">
-			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"},"border":{"radius":"16px"},"background":{"backgroundImage":{"url":"data:image/svg+xml;utf8,%3Csvg xmlns=\u0027http://www.w3.org/2000/svg\u0027 viewBox=\u00270 0 800 600\u0027%3E%3Cdefs%3E%3ClinearGradient id=\u0027g\u0027 x1=\u00270%25\u0027 y1=\u00270%25\u0027 x2=\u0027100%25\u0027 y2=\u0027100%25\u0027%3E%3Cstop offset=\u00270%25\u0027 stop-color=\u0027%23f5f5f4\u0027/%3E%3Cstop offset=\u0027100%25\u0027 stop-color=\u0027%23d4d4d8\u0027/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\u0027800\u0027 height=\u0027600\u0027 fill=\u0027url(%23g)\u0027/%3E%3Ccircle cx=\u0027400\u0027 cy=\u0027300\u0027 r=\u0027120\u0027 fill=\u0027%23ffffff\u0027 opacity=\u00270.5\u0027/%3E%3C/svg%3E","source":"file"},"backgroundSize":"cover"}}} -->
-			<div class="wp-block-group has-background" style="border-radius:16px;aspect-ratio:4/3;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 800 600%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23f5f5f4%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23d4d4d8%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27800%27 height=%27600%27 fill=%27url(%23g)%27/%3E%3Ccircle cx=%27400%27 cy=%27300%27 r=%27120%27 fill=%27%23ffffff%27 opacity=%270.5%27/%3E%3C/svg%3E');background-size:cover"></div>
+			<!-- wp:group {"style":{"dimensions":{"aspectRatio":"4/3"},"border":{"radius":"16px"}},"backgroundColor":"base-2"} -->
+			<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:16px;aspect-ratio:4/3"></div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
@@ -45,20 +45,20 @@
 
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"2.5rem"},"blockGap":"1.25rem"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 			<div class="wp-block-group" style="margin-top:2.5rem">
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:center">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"accent"} --><p class="has-accent-color has-text-color" style="font-size:0.875rem;font-weight:600">✓</p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"muted"} --><p class="has-muted-color has-text-color" style="font-size:0.875rem"><?php esc_html_e( 'No credit card', 'envosta' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:center">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"accent"} --><p class="has-accent-color has-text-color" style="font-size:0.875rem;font-weight:600">✓</p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"muted"} --><p class="has-muted-color has-text-color" style="font-size:0.875rem"><?php esc_html_e( '14-day trial', 'envosta' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:center">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"accent"} --><p class="has-accent-color has-text-color" style="font-size:0.875rem;font-weight:600">✓</p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"muted"} --><p class="has-muted-color has-text-color" style="font-size:0.875rem"><?php esc_html_e( 'Cancel anytime', 'envosta' ); ?></p><!-- /wp:paragraph -->
 				</div>

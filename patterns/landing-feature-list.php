@@ -58,16 +58,16 @@ $envosta_features = array(
 			<!-- wp:group {"className":"envosta-card","style":{"border":{"radius":"16px","width":"1px"},"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"},"blockGap":"0"}},"borderColor":"border","layout":{"type":"flex","orientation":"vertical"}} -->
 			<div class="wp-block-group envosta-card has-border-color has-border-border-color" style="border-width:1px;border-radius:16px;padding:1rem">
 				<?php foreach ( $envosta_features as $i => $feature ) : ?>
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"},"blockGap":"1rem"}<?php echo $i > 0 ? ',"border":{"top":{"color":"var:preset|color|border","width":"1px"}}' : ''; ?>},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-				<div class="wp-block-group" style="<?php echo $i > 0 ? 'border-top-color:var(--wp--preset--color--border);border-top-width:1px;' : ''; ?>padding:1rem">
-					<!-- wp:group {"style":{"dimensions":{"width":"1.5rem","height":"1.5rem"},"border":{"radius":"9999px"}},"backgroundColor":"accent","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-					<div class="wp-block-group has-accent-background-color has-background" style="border-radius:9999px;width:1.5rem;height:1.5rem">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"},"blockGap":"1rem"}<?php echo $i > 0 ? ',"border":{"top":{"color":"var:preset|color|border","width":"1px"}}' : ''; ?>},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="<?php echo $i > 0 ? 'border-top-color:var(--wp--preset--color--border);border-top-width:1px;' : ''; ?>padding:1rem;align-items:flex-start">
+					<!-- wp:group {"style":{"border":{"radius":"9999px"}},"backgroundColor":"accent","layout":{"type":"flex","justifyContent":"center"}} -->
+					<div class="wp-block-group has-accent-background-color has-background" style="border-radius:9999px;width:1.5rem;height:1.5rem;align-items:center">
 						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700"},"color":{"text":"#ffffff"}}} -->
 						<p class="has-text-align-center has-text-color" style="color:#ffffff;font-size:0.75rem;font-weight:700">✓</p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:group -->
-					<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"flex","orientation":"vertical"}} -->
+					<!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem","fontWeight":"600","letterSpacing":"-0.005em"}}} -->
 						<p style="font-size:1rem;font-weight:600;letter-spacing:-0.005em"><?php echo esc_html( $feature['title'] ); ?></p>

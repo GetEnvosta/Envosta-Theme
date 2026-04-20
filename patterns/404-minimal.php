@@ -7,7 +7,7 @@
  * Viewport Width: 1440
  */
 ?>
-<!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"10rem","right":"2rem","bottom":"10rem","left":"2rem"}},"minHeight":"80vh"},"layout":{"type":"constrained","contentSize":"640px"}} -->
+<!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"10rem","right":"2rem","bottom":"10rem","left":"2rem"}},"dimensions":{"minHeight":"80vh"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 <div class="wp-block-group alignfull envosta-reveal" style="min-height:80vh;padding-top:10rem;padding-right:2rem;padding-bottom:10rem;padding-left:2rem">
 
 	<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(7rem, 18vw, 14rem)","lineHeight":"1","letterSpacing":"-0.05em","fontWeight":"800"},"spacing":{"margin":{"bottom":"1rem"}}},"textColor":"base-2"} -->

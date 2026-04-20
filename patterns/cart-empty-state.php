@@ -31,8 +31,8 @@ $envosta_featured = array(
 	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"4rem"},"blockGap":"1rem"}},"layout":{"type":"constrained","contentSize":"520px"}} -->
 	<div class="wp-block-group" style="margin-bottom:4rem">
 
-		<!-- wp:group {"style":{"dimensions":{"width":"4.5rem","height":"4.5rem"},"spacing":{"margin":{"left":"auto","right":"auto","bottom":"0.5rem"}},"border":{"radius":"18px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-		<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:18px;margin-right:auto;margin-bottom:0.5rem;margin-left:auto;width:4.5rem;height:4.5rem">
+		<!-- wp:group {"style":{"spacing":{"margin":{"left":"auto","right":"auto","bottom":"0.5rem"}},"border":{"radius":"18px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:18px;margin-right:auto;margin-bottom:0.5rem;margin-left:auto;width:4.5rem;height:4.5rem;align-items:center">
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.75rem"}}} -->
 			<p class="has-text-align-center" style="font-size:1.75rem">🛍️</p>
 			<!-- /wp:paragraph -->

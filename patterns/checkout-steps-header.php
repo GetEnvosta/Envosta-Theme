@@ -16,16 +16,16 @@ $envosta_steps = array(
 <!-- wp:group {"align":"full","className":"envosta-reveal","style":{"spacing":{"padding":{"top":"2.5rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group alignfull envosta-reveal" style="padding-top:2.5rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
-	<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"0.75rem"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+	<div class="wp-block-group" style="align-items:center">
 
 		<?php foreach ( $envosta_steps as $index => $step ) : ?>
 
 			<?php if ( 'current' === $step['state'] ) : ?>
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"0.5rem"},"blockGap":"0.625rem"},"border":{"radius":"9999px"},"color":{"background":"var:preset|color|contrast","text":"var:preset|color|base"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group has-text-color has-background" style="border-radius:9999px;color:var(--wp--preset--color--base);background-color:var(--wp--preset--color--contrast);padding:0.5rem 1rem 0.5rem 0.5rem">
-					<!-- wp:group {"style":{"dimensions":{"width":"1.5rem","height":"1.5rem"},"border":{"radius":"9999px"},"color":{"background":"#ffffff25"}},"layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-					<div class="wp-block-group has-background" style="border-radius:9999px;background-color:#ffffff25;width:1.5rem;height:1.5rem">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"0.5rem"},"blockGap":"0.625rem"},"border":{"radius":"9999px"}},"backgroundColor":"contrast","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group has-base-color has-contrast-background-color has-text-color has-background" style="border-radius:9999px;padding:0.5rem 1rem 0.5rem 0.5rem;align-items:center">
+					<!-- wp:group {"style":{"border":{"radius":"9999px"}},"layout":{"type":"flex","justifyContent":"center"}} -->
+					<div class="wp-block-group" style="border-radius:9999px;background-color:#ffffff25;width:1.5rem;height:1.5rem;align-items:center">
 						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700"}}} -->
 						<p class="has-text-align-center" style="font-size:0.75rem;font-weight:700"><?php echo esc_html( $step['num'] ); ?></p>
 						<!-- /wp:paragraph -->
@@ -37,10 +37,10 @@ $envosta_steps = array(
 				</div>
 				<!-- /wp:group -->
 			<?php else : ?>
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"0.5rem"},"blockGap":"0.625rem"},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-				<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;padding:0.5rem 1rem 0.5rem 0.5rem">
-					<!-- wp:group {"style":{"dimensions":{"width":"1.5rem","height":"1.5rem"},"border":{"radius":"9999px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
-					<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:9999px;width:1.5rem;height:1.5rem">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"0.5rem","right":"1rem","bottom":"0.5rem","left":"0.5rem"},"blockGap":"0.625rem"},"border":{"radius":"9999px","width":"1px"}},"borderColor":"border","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group has-border-color has-border-border-color" style="border-width:1px;border-radius:9999px;padding:0.5rem 1rem 0.5rem 0.5rem;align-items:center">
+					<!-- wp:group {"style":{"border":{"radius":"9999px"}},"backgroundColor":"base-2","layout":{"type":"flex","justifyContent":"center"}} -->
+					<div class="wp-block-group has-base-2-background-color has-background" style="border-radius:9999px;width:1.5rem;height:1.5rem;align-items:center">
 						<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700"}},"textColor":"muted"} -->
 						<p class="has-text-align-center has-muted-color has-text-color" style="font-size:0.75rem;font-weight:700"><?php echo esc_html( $step['num'] ); ?></p>
 						<!-- /wp:paragraph -->

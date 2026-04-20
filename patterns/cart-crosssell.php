@@ -24,8 +24,8 @@
 	<!-- wp:woocommerce/product-collection {"queryId":30,"query":{"perPage":3,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"popularity","inherit":false,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[]},"displayLayout":{"type":"flex","columns":3,"shrinkColumns":true},"collection":"woocommerce/product-collection/cross-sells"} -->
 	<div class="wp-block-woocommerce-product-collection">
 		<!-- wp:woocommerce/product-template -->
-			<!-- wp:group {"className":"envosta-card envosta-card-hover","style":{"spacing":{"padding":"0"},"border":{"radius":"12px","width":"1px"},"color":{"background":"var:preset|color|base"}},"borderColor":"border"} -->
-			<div class="wp-block-group envosta-card envosta-card-hover has-border-color has-border-border-color has-background" style="border-width:1px;border-radius:12px;background-color:var(--wp--preset--color--base);padding:0;overflow:hidden">
+			<!-- wp:group {"className":"envosta-card envosta-card-hover","style":{"spacing":{"padding":"0"},"border":{"radius":"12px","width":"1px"}},"backgroundColor":"base","borderColor":"border"} -->
+			<div class="wp-block-group envosta-card envosta-card-hover has-border-color has-border-border-color has-base-background-color has-background" style="border-width:1px;border-radius:12px;padding:0;overflow:hidden">
 				<!-- wp:columns {"verticalAlignment":"center","isStackedOnMobile":false,"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 				<div class="wp-block-columns are-vertically-aligned-center is-not-stacked-on-mobile">
 					<!-- wp:column {"verticalAlignment":"center","width":"110px"} -->

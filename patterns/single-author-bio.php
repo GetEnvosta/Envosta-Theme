@@ -21,8 +21,8 @@
 
 			<!-- wp:column {"verticalAlignment":"top","width":"120px"} -->
 			<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:120px">
-				<!-- wp:group {"style":{"dimensions":{"width":"96px","height":"96px"},"border":{"radius":"9999px"},"background":{"backgroundImage":{"url":"data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 200 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27a%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%2750%25%27 stop-color=%27%23f472b6%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23a78bfa%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27200%27 height=%27200%27 fill=%27url(%23a)%27/%3E%3Ccircle cx=%27100%27 cy=%2780%27 r=%2732%27 fill=%27%23ffffff%27 opacity=%270.7%27/%3E%3Cpath d=%27M40 170 Q100 110 160 170 Z%27 fill=%27%23ffffff%27 opacity=%270.55%27/%3E%3C/svg%3E","source":"file"},"backgroundSize":"cover"}}} -->
-				<div class="wp-block-group has-background" style="border-radius:9999px;width:96px;height:96px;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 200 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27a%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23fcd34d%27/%3E%3Cstop offset=%2750%25%27 stop-color=%27%23f472b6%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23a78bfa%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27200%27 height=%27200%27 fill=%27url(%23a)%27/%3E%3Ccircle cx=%27100%27 cy=%2780%27 r=%2732%27 fill=%27%23ffffff%27 opacity=%270.7%27/%3E%3Cpath d=%27M40 170 Q100 110 160 170 Z%27 fill=%27%23ffffff%27 opacity=%270.55%27/%3E%3C/svg%3E');background-size:cover"></div>
+				<!-- wp:group {"style":{"border":{"radius":"9999px"}},"backgroundColor":"accent-soft"} -->
+				<div class="wp-block-group has-accent-soft-background-color has-background" style="border-radius:9999px;width:96px;height:96px"></div>
 				<!-- /wp:group -->
 			</div>
 			<!-- /wp:column -->

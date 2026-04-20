@@ -35,14 +35,14 @@
 
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"2rem"},"blockGap":"1rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 			<div class="wp-block-group" style="margin-top:2rem">
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:flex-start">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}},"textColor":"accent"} --><p class="has-accent-color has-text-color" style="font-size:1rem;font-weight:700">✓</p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.98rem","lineHeight":"1.55","fontWeight":"500"}}} --><p style="font-size:0.98rem;font-weight:500;line-height:1.55"><?php esc_html_e( 'One senior lead, start to finish — no handoffs to juniors halfway through.', 'envosta' ); ?></p><!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
-				<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-				<div class="wp-block-group">
+				<!-- wp:group {"style":{"spacing":{"blockGap":"0.875rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+				<div class="wp-block-group" style="align-items:flex-start">
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"1rem","fontWeight":"700"}},"textColor":"accent"} --><p class="has-accent-color has-text-color" style="font-size:1rem;font-weight:700">✓</p><!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.98rem","lineHeight":"1.55","fontWeight":"500"}}} --><p style="font-size:0.98rem;font-weight:500;line-height:1.55"><?php esc_html_e( 'Fixed weekly price, scope that flexes, work you actually see every Friday.', 'envosta' ); ?></p><!-- /wp:paragraph -->
 				</div>
