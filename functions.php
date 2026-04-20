@@ -100,6 +100,17 @@ function envosta_register_pattern_categories() {
 		'envosta-commerce'  => __( 'Envosta — Commerce',  'envosta' ),
 		'envosta-editorial' => __( 'Envosta — Editorial', 'envosta' ),
 		'envosta-cta'       => __( 'Envosta — CTA',       'envosta' ),
+		'envosta-404'       => __( 'Envosta — 404',       'envosta' ),
+		'envosta-archive'   => __( 'Envosta — Archive',   'envosta' ),
+		'envosta-blog'      => __( 'Envosta — Blog',      'envosta' ),
+		'envosta-page'      => __( 'Envosta — Page',      'envosta' ),
+		'envosta-landing'   => __( 'Envosta — Landing',   'envosta' ),
+		'envosta-search'    => __( 'Envosta — Search',    'envosta' ),
+		'envosta-single'    => __( 'Envosta — Single Post', 'envosta' ),
+		'envosta-shop'      => __( 'Envosta — Shop',      'envosta' ),
+		'envosta-product'   => __( 'Envosta — Product',   'envosta' ),
+		'envosta-cart'      => __( 'Envosta — Cart',      'envosta' ),
+		'envosta-checkout'  => __( 'Envosta — Checkout',  'envosta' ),
 	);
 
 	foreach ( $categories as $slug => $label ) {
