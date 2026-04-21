@@ -2,7 +2,7 @@
 /**
  * Title: Header with Cart
  * Slug: envosta/header-with-cart
- * Categories: header
+ * Categories: woocommerce, header
  * Block Types: core/template-part/header
  * Description: Site header with logo, navigation, search icon, and a cart trigger that opens the Envosta cart drawer. Ideal for any Envosta site running WooCommerce.
  *

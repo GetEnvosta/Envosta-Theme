@@ -142,6 +142,10 @@ if ( is_admin() )
 // Mobile menu block styles: Push / Slide-Over / Slide-Down
 include dirname( __FILE__ ) . '/inc/mobile-menu.php';
 
+// Pattern categories (Site / Blog / WooCommerce) shown in the FSE sidebar.
+// WooCommerce only appears when WC is active.
+include dirname( __FILE__ ) . '/inc/pattern-categories.php';
+
 // Hide WooCommerce-only templates/parts/patterns from the Site Editor when
 // WooCommerce is not active. (The files still ship, so everything lights up
 // the moment WooCommerce is installed.)

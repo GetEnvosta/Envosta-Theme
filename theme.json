@@ -15,12 +15,9 @@
 			"title": "Page: Checkout"
 		},
 		{
-			"name": "template-page-w-hero",
-			"title": "Page with Hero"
-		},
-		{
-			"name": "template-page-w-title",
-			"title": "Page with Title"
+			"name": "page-full-width",
+			"title": "Full Width Page",
+			"postTypes": [ "page" ]
 		},
 		{
 			"name": "archive-product",
