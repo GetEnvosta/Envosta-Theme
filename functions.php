@@ -142,6 +142,18 @@ if ( is_admin() )
 // Mobile menu block styles: Push / Slide-Over / Slide-Down
 include dirname( __FILE__ ) . '/inc/mobile-menu.php';
 
+// WooCommerce integration — loads only when WooCommerce is active so the
+// theme auto-detects a store setup and ships the Shopify-style cart drawer,
+// product gallery features, and preset-ready templates the moment Woo is on.
+if ( ! function_exists( 'envosta_load_woocommerce_integration' ) ) {
+	function envosta_load_woocommerce_integration() {
+		if ( class_exists( 'WooCommerce' ) ) {
+			include dirname( __FILE__ ) . '/inc/woocommerce.php';
+		}
+	}
+}
+add_action( 'after_setup_theme', 'envosta_load_woocommerce_integration', 5 );
+
 /**
  * GitHub Theme Auto-Updater
  *

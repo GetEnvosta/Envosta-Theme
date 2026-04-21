@@ -513,3 +513,173 @@ input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]
 		transition: none;
 	}
 }
+
+
+/* =========================================================================
+   WooCommerce / Shopify-style enhancements
+   Activated automatically when WooCommerce is present (body class
+   .envosta-has-woocommerce is added by inc/woocommerce.php).
+   ========================================================================= */
+
+/* -- Cart drawer ----------------------------------------------------------- */
+.envosta-cart-drawer {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	pointer-events: none;
+}
+.envosta-cart-drawer.is-open {
+	pointer-events: auto;
+}
+.envosta-cart-drawer__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+.envosta-cart-drawer.is-open .envosta-cart-drawer__backdrop {
+	opacity: 1;
+}
+.envosta-cart-drawer__panel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: min(420px, 100vw);
+	background: var(--wp--preset--color--theme-1, #fff);
+	color: var(--wp--preset--color--theme-4, #1e1e1e);
+	display: flex;
+	flex-direction: column;
+	transform: translateX(100%);
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: -8px 0 24px rgba(0, 0, 0, 0.1);
+}
+.envosta-cart-drawer.is-open .envosta-cart-drawer__panel {
+	transform: translateX(0);
+}
+.envosta-cart-drawer__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.25rem;
+	border-bottom: 1px solid var(--wp--preset--color--theme-2, #eee);
+}
+.envosta-cart-drawer__title {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.envosta-cart-drawer__close {
+	background: transparent;
+	border: 0;
+	padding: 0.25rem 0.5rem;
+	font-size: 1.75rem;
+	line-height: 1;
+	cursor: pointer;
+	color: inherit;
+}
+.envosta-cart-drawer__body {
+	flex: 1;
+	overflow-y: auto;
+	padding: 1rem 1.25rem 1.5rem;
+}
+
+/* Lock the page when the drawer is open */
+body.envosta-cart-open {
+	overflow: hidden;
+}
+
+/* -- Cart count bubble (for header cart icons) ----------------------------- */
+.envosta-cart-count {
+	display: inline-grid;
+	place-items: center;
+	min-width: 1.25rem;
+	height: 1.25rem;
+	padding: 0 0.3rem;
+	font-size: 0.68rem;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--wp--preset--color--theme-1, #fff);
+	background: var(--wp--preset--color--theme-4, #1e1e1e);
+	border-radius: 9999px;
+	margin-left: 0.25rem;
+	vertical-align: middle;
+}
+
+/* -- Sale badge (Shopify pill style, not flag) ----------------------------- */
+.envosta-sale-badge,
+.envosta-has-woocommerce .wc-block-components-sale-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.25rem 0.625rem;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--theme-1, #fff);
+	background: var(--wp--preset--color--theme-4, #1e1e1e);
+	border-radius: 9999px;
+	line-height: 1;
+}
+
+/* -- Breadcrumb trimming --------------------------------------------------- */
+.envosta-breadcrumb {
+	font-size: 0.82rem;
+	color: color-mix( in srgb, currentColor 60%, transparent );
+	margin-bottom: 1rem;
+}
+.envosta-breadcrumb a {
+	color: inherit;
+	text-decoration: none;
+}
+.envosta-breadcrumb a:hover {
+	text-decoration: underline;
+}
+.envosta-crumb-sep {
+	opacity: 0.5;
+	padding: 0 0.25rem;
+}
+
+/* -- Product card hover lift (subtle) -------------------------------------- */
+.envosta-has-woocommerce .wc-block-grid__product,
+.envosta-has-woocommerce .wp-block-post.type-product {
+	transition: transform 0.2s ease;
+}
+.envosta-has-woocommerce .wc-block-grid__product:hover,
+.envosta-has-woocommerce .wp-block-post.type-product:hover {
+	transform: translateY(-2px);
+}
+
+/* -- Mini-cart inside drawer: tighten spacing and strip woo defaults ------- */
+.envosta-cart-drawer .widget_shopping_cart_content,
+.envosta-cart-drawer .woocommerce-mini-cart {
+	font-size: 0.92rem;
+}
+.envosta-cart-drawer .woocommerce-mini-cart__buttons.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+.envosta-cart-drawer .woocommerce-mini-cart__buttons.buttons .button {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+/* -- Focus visibility inside the drawer ------------------------------------ */
+.envosta-cart-drawer *:focus-visible {
+	outline: 2px solid var(--wp--preset--color--theme-4, #1e1e1e);
+	outline-offset: 2px;
+}
+
+/* -- Reduce motion --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+	.envosta-cart-drawer__panel,
+	.envosta-cart-drawer__backdrop,
+	.envosta-has-woocommerce .wc-block-grid__product,
+	.envosta-has-woocommerce .wp-block-post.type-product {
+		transition: none;
+	}
+}
