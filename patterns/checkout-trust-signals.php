@@ -2,7 +2,7 @@
 /**
  * Title: Checkout — Trust Signals
  * Slug: envosta/checkout-trust-signals
- * Categories: envosta-checkout
+ * Categories: envosta-woocommerce
  * Template Types: page-checkout
  * Description: Three quiet reassurance cards for the top of the checkout page — secure payment, easy returns, real-time support.
  * Viewport Width: 1440

@@ -2,7 +2,7 @@
 /**
  * Title: Product — Features & Specs
  * Slug: envosta/product-features-tabs
- * Categories: envosta-product
+ * Categories: envosta-woocommerce
  * Template Types: single-product
  * Description: Three-column feature breakdown with large numerals highlighting key product benefits.
  * Viewport Width: 1440

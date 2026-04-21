@@ -2,7 +2,7 @@
 /**
  * Title: Single — Author Bio
  * Slug: envosta/single-author-bio
- * Categories: envosta-single
+ * Categories: envosta-blog
  * Template Types: single
  * Description: End-of-post author card with gradient avatar, name, tagline, bio, and more-from-author link.
  * Viewport Width: 1440

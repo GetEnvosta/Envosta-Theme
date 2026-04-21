@@ -2,7 +2,7 @@
 /**
  * Title: Shop — Header with Filters
  * Slug: envosta/shop-header-filters
- * Categories: envosta-shop
+ * Categories: envosta-woocommerce
  * Template Types: archive-product
  * Description: Shop header with eyebrow, title, and short description on the left, filter pill bar on the right.
  * Viewport Width: 1440

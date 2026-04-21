@@ -2,7 +2,7 @@
 /**
  * Title: Archive — Featured Header
  * Slug: envosta/archive-header-featured
- * Categories: envosta-archive
+ * Categories: envosta-blog
  * Template Types: archive, category, tag, author, date
  * Description: Two-column archive header with category eyebrow, title, description, and gradient stat card.
  * Viewport Width: 1440

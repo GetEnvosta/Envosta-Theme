@@ -2,7 +2,7 @@
 /**
  * Title: Cart — Empty State
  * Slug: envosta/cart-empty-state
- * Categories: envosta-cart
+ * Categories: envosta-woocommerce
  * Template Types: page-cart
  * Description: Centered empty cart with icon, reassurance copy, continue shopping CTA, and a three-column featured row.
  * Viewport Width: 1440

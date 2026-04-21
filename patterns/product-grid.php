@@ -2,7 +2,7 @@
 /**
  * Title: Product Grid
  * Slug: envosta/product-grid
- * Categories: envosta-commerce
+ * Categories: envosta-woocommerce
  * Description: WooCommerce product showcase with polished section header, card hover, and view-all link.
  * Viewport Width: 1440
  */

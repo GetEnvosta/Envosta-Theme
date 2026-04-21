@@ -2,7 +2,7 @@
 /**
  * Title: Shop — Hero Banner
  * Slug: envosta/shop-header-hero
- * Categories: envosta-shop
+ * Categories: envosta-woocommerce
  * Template Types: archive-product
  * Description: Edge-to-edge shop hero banner with gradient background, eyebrow, large heading, subhead and CTA.
  * Viewport Width: 1440

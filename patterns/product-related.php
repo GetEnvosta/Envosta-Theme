@@ -2,7 +2,7 @@
 /**
  * Title: Product — Related Products Rail
  * Slug: envosta/product-related
- * Categories: envosta-product
+ * Categories: envosta-woocommerce
  * Template Types: single-product
  * Description: "You may also like" section with a 4-column product collection grid of recent products.
  * Viewport Width: 1440

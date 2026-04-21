@@ -94,23 +94,17 @@ function envosta_register_pattern_categories() {
 	}
 
 	$categories = array(
-		'envosta-hero'      => __( 'Hero',         'envosta' ),
-		'envosta-features'  => __( 'Features',     'envosta' ),
-		'envosta-content'   => __( 'Content',      'envosta' ),
-		'envosta-commerce'  => __( 'Commerce',     'envosta' ),
-		'envosta-editorial' => __( 'Editorial',    'envosta' ),
-		'envosta-cta'       => __( 'CTA',          'envosta' ),
-		'envosta-404'       => __( '404',          'envosta' ),
-		'envosta-archive'   => __( 'Archive',      'envosta' ),
-		'envosta-blog'      => __( 'Blog',         'envosta' ),
-		'envosta-page'      => __( 'Page',         'envosta' ),
-		'envosta-landing'   => __( 'Landing',      'envosta' ),
-		'envosta-search'    => __( 'Search',       'envosta' ),
-		'envosta-single'    => __( 'Single Post',  'envosta' ),
-		'envosta-shop'      => __( 'Shop',         'envosta' ),
-		'envosta-product'   => __( 'Product',      'envosta' ),
-		'envosta-cart'      => __( 'Cart',         'envosta' ),
-		'envosta-checkout'  => __( 'Checkout',     'envosta' ),
+		'envosta-hero'        => __( 'Hero',        'envosta' ),
+		'envosta-features'    => __( 'Features',    'envosta' ),
+		'envosta-content'     => __( 'Content',     'envosta' ),
+		'envosta-editorial'   => __( 'Editorial',   'envosta' ),
+		'envosta-cta'         => __( 'CTA',         'envosta' ),
+		'envosta-404'         => __( '404',         'envosta' ),
+		'envosta-blog'        => __( 'Blog',        'envosta' ),
+		'envosta-page'        => __( 'Page',        'envosta' ),
+		'envosta-landing'     => __( 'Landing',     'envosta' ),
+		'envosta-search'      => __( 'Search',      'envosta' ),
+		'envosta-woocommerce' => __( 'WooCommerce', 'envosta' ),
 	);
 
 	foreach ( $categories as $slug => $label ) {

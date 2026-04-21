@@ -2,7 +2,7 @@
 /**
  * Title: Archive — Classic Header
  * Slug: envosta/archive-header-classic
- * Categories: envosta-archive
+ * Categories: envosta-blog
  * Template Types: archive, category, tag, author, date
  * Description: Simple centered archive title with description paragraph and separator.
  * Viewport Width: 1440
