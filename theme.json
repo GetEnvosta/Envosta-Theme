@@ -46,8 +46,8 @@
 			}
 		},
 		"color": {
-			"defaultDuotone": false,
-			"defaultGradients": false,
+			"defaultDuotone": true,
+			"defaultGradients": true,
 			"defaultPalette": false,
 			"duotone": [
 				{
