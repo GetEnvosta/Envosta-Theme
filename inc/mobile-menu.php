@@ -33,3 +33,20 @@ if ( ! function_exists( 'envosta_register_mobile_menu_styles' ) ) :
 	}
 endif;
 add_action( 'init', 'envosta_register_mobile_menu_styles' );
+
+/**
+ * Enqueue the small JS that adds tap-outside-to-close + close
+ * animation to the three Envosta mobile menu variants.
+ */
+if ( ! function_exists( 'envosta_enqueue_mobile_menu_js' ) ) :
+	function envosta_enqueue_mobile_menu_js() {
+		wp_enqueue_script(
+			'envosta-mobile-menu',
+			get_template_directory_uri() . '/assets/js/mobile-menu.js',
+			array(),
+			wp_get_theme()->get( 'Version' ),
+			array( 'in_footer' => true, 'strategy' => 'defer' )
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'envosta_enqueue_mobile_menu_js' );
