@@ -491,6 +491,11 @@
 			"area": "uncategorized",
 			"name": "mini-cart",
 			"title": "Mini Cart"
+		},
+		{
+			"area": "mobile-menu",
+			"name": "mobile-menu",
+			"title": "Mobile Menu"
 		}
 	]
 }

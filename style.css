@@ -834,3 +834,152 @@ body.envosta-cart-open {
 		display: none !important;
 	}
 }
+
+/* =========================================================================
+   Mobile Menu Drawer (template-part backed)
+
+   Companion to inc/mobile-menu.php + assets/js/mobile-menu-drawer.js.
+   The drawer is rendered once in the footer and toggled by any element
+   with [data-envosta-mobile-menu-open]. Three directional variants reuse
+   the same @keyframes used by the core/navigation block styles above.
+   ========================================================================= */
+.envosta-mobile-menu-drawer[hidden] {
+	display: none !important;
+}
+.envosta-mobile-menu-drawer {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: block;
+	pointer-events: auto;
+}
+.envosta-mobile-menu-drawer__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0);
+	transition: background-color 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.envosta-mobile-menu-drawer.is-open .envosta-mobile-menu-drawer__backdrop {
+	background: rgba(0, 0, 0, 0.4);
+}
+.envosta-mobile-menu-drawer.envosta-closing .envosta-mobile-menu-drawer__backdrop {
+	background: rgba(0, 0, 0, 0);
+}
+.envosta-mobile-menu-drawer__panel {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: var(--wp--preset--color--theme-1, #fff);
+	color: var(--wp--preset--color--theme-4, #1e1e1e);
+	overflow-y: auto;
+	overscroll-behavior: contain;
+	display: flex;
+	flex-direction: column;
+	outline: none;
+}
+.envosta-mobile-menu-drawer__close {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	z-index: 2;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	border-radius: 999px;
+}
+.envosta-mobile-menu-drawer__close:hover,
+.envosta-mobile-menu-drawer__close:focus-visible {
+	background: rgba(0, 0, 0, 0.06);
+}
+.envosta-mobile-menu-drawer__content {
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+/* -- Slide-Over (default): from the right -------------------------------- */
+.envosta-mobile-menu-drawer.is-style-slide-over .envosta-mobile-menu-drawer__panel {
+	right: 0;
+	left: auto;
+	width: min(82vw, 380px);
+	box-shadow: -4px 0 32px rgba(0, 0, 0, 0.12);
+}
+.envosta-mobile-menu-drawer.is-style-slide-over.is-open .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-over-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.envosta-mobile-menu-drawer.is-style-slide-over.envosta-closing .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-over-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* -- Push: from the left ------------------------------------------------- */
+.envosta-mobile-menu-drawer.is-style-push .envosta-mobile-menu-drawer__panel {
+	left: 0;
+	right: auto;
+	width: min(82vw, 380px);
+	box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
+}
+.envosta-mobile-menu-drawer.is-style-push.is-open .envosta-mobile-menu-drawer__panel {
+	animation: envosta-push-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.envosta-mobile-menu-drawer.is-style-push.envosta-closing .envosta-mobile-menu-drawer__panel {
+	animation: envosta-push-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* -- Slide-Down: full width from the top --------------------------------- */
+.envosta-mobile-menu-drawer.is-style-slide-down .envosta-mobile-menu-drawer__panel {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: auto;
+	width: 100%;
+	height: 100dvh;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+.envosta-mobile-menu-drawer.is-style-slide-down.is-open .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-down-in 0.36s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.envosta-mobile-menu-drawer.is-style-slide-down.envosta-closing .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-down-out 0.28s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Lock body scroll while the drawer is open. */
+body.envosta-mobile-menu-open {
+	overflow: hidden;
+	touch-action: none;
+}
+
+/* The hamburger trigger button — keeps a tappable target without competing
+   with theme button styles. */
+.envosta-mobile-menu-trigger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	border-radius: 6px;
+}
+.envosta-mobile-menu-trigger:hover,
+.envosta-mobile-menu-trigger:focus-visible {
+	background: rgba(0, 0, 0, 0.06);
+}
+
+/* Reduced motion — skip the entrance/exit slides. */
+@media (prefers-reduced-motion: reduce) {
+	.envosta-mobile-menu-drawer .envosta-mobile-menu-drawer__panel {
+		animation: none !important;
+	}
+	.envosta-mobile-menu-drawer__backdrop {
+		transition: none !important;
+	}
+}
