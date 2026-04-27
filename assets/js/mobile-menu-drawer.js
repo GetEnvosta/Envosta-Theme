@@ -58,6 +58,11 @@
 		drawer.setAttribute( 'aria-hidden', 'false' );
 		document.body.classList.add( 'envosta-mobile-menu-open' );
 
+		// Push variant: slide the page canvas out.
+		if ( drawer.classList.contains( 'is-style-push' ) ) {
+			document.body.classList.add( 'envosta-mobile-menu-push-active' );
+		}
+
 		var closeBtn = drawer.querySelector( '.envosta-mobile-menu-drawer__close' );
 		if ( closeBtn ) {
 			try { closeBtn.focus( { preventScroll: true } ); } catch ( e ) { closeBtn.focus(); }
@@ -84,6 +89,10 @@
 			}
 			lastTrigger = null;
 		}
+
+		// Trigger canvas slide-back BEFORE the panel exit animation starts
+		// so both run together smoothly.
+		document.body.classList.remove( 'envosta-mobile-menu-push-active' );
 
 		drawer.classList.add( 'envosta-closing' );
 

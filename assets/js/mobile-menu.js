@@ -41,6 +41,34 @@
 	var SAFETY_MS = 400;
 
 	/**
+	 * 0. Canvas push: when an is-style-push nav opens, mark the body so
+	 *    its non-drawer children translate out via CSS. Mirrors the
+	 *    drawer-system behavior.
+	 */
+	function watchPushOpen() {
+		// MutationObserver on each push container: toggle body class as
+		// .is-menu-open is added/removed.
+		var pushContainers = document.querySelectorAll( '.wp-block-navigation.is-style-push .wp-block-navigation__responsive-container' );
+		pushContainers.forEach( function ( container ) {
+			var observer = new MutationObserver( function () {
+				var open = container.classList.contains( 'is-menu-open' );
+				var closing = container.classList.contains( 'envosta-closing' );
+				if ( open && ! closing ) {
+					document.body.classList.add( 'envosta-mobile-menu-push-active' );
+				} else if ( closing || ! open ) {
+					document.body.classList.remove( 'envosta-mobile-menu-push-active' );
+				}
+			} );
+			observer.observe( container, { attributes: true, attributeFilter: [ 'class' ] } );
+		} );
+	}
+	if ( document.readyState === 'loading' ) {
+		document.addEventListener( 'DOMContentLoaded', watchPushOpen );
+	} else {
+		watchPushOpen();
+	}
+
+	/**
 	 * 1. Tap-outside-to-close
 	 * Listen on document; if the click was inside an open Envosta menu's
 	 * responsive container but NOT inside the panel content, close it.

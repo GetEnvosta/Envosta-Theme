@@ -500,44 +500,44 @@ input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]
 		gap: 1rem;
 	}
 
-	/* -- Push: panel slides in from the left ---------------------------- */
+	/* All three variants now use the full viewport. */
+
+	/* -- Push: full-screen from the left, page canvas slides out -------- */
 	.wp-block-navigation.is-style-push .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		left: 0 !important;
-		right: auto !important;
-		width: min(78vw, 360px);
-		box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
-		animation: envosta-push-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+		right: 0 !important;
+		width: 100vw !important;
+		animation: envosta-push-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	.wp-block-navigation.is-style-push .wp-block-navigation__responsive-container.envosta-closing .wp-block-navigation__responsive-container-content {
-		animation: envosta-push-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+		animation: envosta-push-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	@keyframes envosta-push-in   { from { transform: translateX(-100%); } to { transform: translateX(0); } }
 	@keyframes envosta-push-out  { from { transform: translateX(0); }    to { transform: translateX(-100%); } }
 
-	/* -- Slide-Over: panel slides in from the right --------------------- */
+	/* -- Slide-Over: full-screen from the right ------------------------- */
 	.wp-block-navigation.is-style-slide-over .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		right: 0 !important;
-		left: auto !important;
-		width: min(78vw, 360px);
-		box-shadow: -4px 0 32px rgba(0, 0, 0, 0.12);
-		animation: envosta-slide-over-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+		left: 0 !important;
+		width: 100vw !important;
+		animation: envosta-slide-over-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	.wp-block-navigation.is-style-slide-over .wp-block-navigation__responsive-container.envosta-closing .wp-block-navigation__responsive-container-content {
-		animation: envosta-slide-over-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+		animation: envosta-slide-over-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	@keyframes envosta-slide-over-in   { from { transform: translateX(100%); }  to { transform: translateX(0); } }
 	@keyframes envosta-slide-over-out  { from { transform: translateX(0); }     to { transform: translateX(100%); } }
 
-	/* -- Slide-Down: panel covers the full viewport from the top -------- */
+	/* -- Slide-Down: full-screen from the top --------------------------- */
 	.wp-block-navigation.is-style-slide-down .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
 		left: 0 !important;
 		right: 0 !important;
 		width: 100% !important;
 		height: 100dvh;
-		animation: envosta-slide-down-in 0.36s cubic-bezier(0.4, 0, 0.2, 1) both;
+		animation: envosta-slide-down-in 0.40s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	.wp-block-navigation.is-style-slide-down .wp-block-navigation__responsive-container.envosta-closing .wp-block-navigation__responsive-container-content {
-		animation: envosta-slide-down-out 0.28s cubic-bezier(0.4, 0, 0.2, 1) both;
+		animation: envosta-slide-down-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 	}
 	@keyframes envosta-slide-down-in   { from { transform: translateY(-100%); } to { transform: translateY(0); } }
 	@keyframes envosta-slide-down-out  { from { transform: translateY(0); }    to { transform: translateY(-100%); } }
@@ -869,6 +869,8 @@ body.envosta-cart-open {
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	width: 100vw;
+	height: 100dvh;
 	background: var(--wp--preset--color--theme-1, #fff);
 	color: var(--wp--preset--color--theme-4, #1e1e1e);
 	overflow-y: auto;
@@ -903,49 +905,58 @@ body.envosta-cart-open {
 	min-height: 0;
 }
 
-/* -- Slide-Over (default): from the right -------------------------------- */
+/* All three variants use the full viewport. The only difference between
+   them is the entry/exit direction. */
+
+/* -- Slide-Over (default): full viewport from the right ------------------ */
 .envosta-mobile-menu-drawer.is-style-slide-over .envosta-mobile-menu-drawer__panel {
 	right: 0;
-	left: auto;
-	width: min(82vw, 380px);
-	box-shadow: -4px 0 32px rgba(0, 0, 0, 0.12);
+	left: 0;
 }
 .envosta-mobile-menu-drawer.is-style-slide-over.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-over-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-slide-over-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 .envosta-mobile-menu-drawer.is-style-slide-over.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-over-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-slide-over-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-/* -- Push: from the left ------------------------------------------------- */
+/* -- Push: full viewport from the left, page canvas slides out ----------- */
 .envosta-mobile-menu-drawer.is-style-push .envosta-mobile-menu-drawer__panel {
 	left: 0;
-	right: auto;
-	width: min(82vw, 380px);
-	box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
+	right: 0;
 }
 .envosta-mobile-menu-drawer.is-style-push.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-push-in 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-push-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 .envosta-mobile-menu-drawer.is-style-push.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-push-out 0.24s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-push-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-/* -- Slide-Down: full width from the top --------------------------------- */
+/* -- Slide-Down: full viewport from the top ------------------------------ */
 .envosta-mobile-menu-drawer.is-style-slide-down .envosta-mobile-menu-drawer__panel {
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: auto;
-	width: 100%;
-	height: 100dvh;
-	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 .envosta-mobile-menu-drawer.is-style-slide-down.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-down-in 0.36s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-slide-down-in 0.40s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 .envosta-mobile-menu-drawer.is-style-slide-down.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-down-out 0.28s cubic-bezier(0.4, 0, 0.2, 1) both;
+	animation: envosta-slide-down-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* -- Push: page canvas slide --------------------------------------------- */
+/* Direct children of <body> get a transform transition so the canvas
+   slides out and back in perfectly smoothly. We can't transform <body>
+   itself because that would create a containing block for our fixed
+   drawer (which would then move with it and disappear offscreen). */
+body > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
+	transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1);
+	will-change: auto;
+}
+body.envosta-mobile-menu-push-active > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
+	transform: translateX(100vw);
 }
 
 /* Lock body scroll while the drawer is open. */
