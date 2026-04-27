@@ -2,7 +2,7 @@
 /**
  * Title: Announcement Bar
  * Slug: envosta/announcement-bar
- * Categories: site
+ * Categories: banner, header
  * Block Types: core/template-part/header
  * Description: Thin, high-contrast top strip for shipping promos or storewide announcements. Drops above the header.
  *

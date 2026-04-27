@@ -2,7 +2,7 @@
 /**
  * Title: Footer — Simple
  * Slug: envosta/footer-simple
- * Categories: site, footer
+ * Categories: footer
  * Block Types: core/template-part/footer
  * Description: Minimal footer with copyright, Privacy and Terms links, and a "Powered by Envosta" credit. Single row on desktop, stacks on mobile.
  *

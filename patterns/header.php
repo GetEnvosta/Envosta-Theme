@@ -2,7 +2,7 @@
 /**
  * Title: Header
  * Slug: envosta/header
- * Categories: site, header
+ * Categories: header
  * Block Types: core/template-part/header
  * Description: Header with site title, navigation, and call-to-action button.
  *

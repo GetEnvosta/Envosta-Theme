@@ -2,7 +2,7 @@
 /**
  * Title: Footer
  * Slug: envosta/footer
- * Categories: site, footer
+ * Categories: footer
  * Block Types: core/template-part/footer
  * Description: Footer with location, hours, and contact information.
  *
