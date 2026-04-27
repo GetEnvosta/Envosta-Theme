@@ -127,31 +127,3 @@ if ( ! function_exists( 'envosta_unregister_woo_patterns' ) ) :
 	}
 endif;
 add_action( 'init', 'envosta_unregister_woo_patterns', 20 );
-
-/**
- * Register a "WooCommerce" template-part area so the four product
- * Add-to-Cart parts (and any future Woo-specific parts) are grouped
- * under their own heading in the Site Editor instead of "Uncategorized".
- *
- * Registered unconditionally — when WC isn't active the area still
- * exists but is empty (the parts themselves are filtered out by
- * envosta_filter_woo_templates above).
- */
-if ( ! function_exists( 'envosta_register_woo_template_part_area' ) ) :
-	function envosta_register_woo_template_part_area( $areas ) {
-		foreach ( $areas as $existing ) {
-			if ( isset( $existing['area'] ) && 'woocommerce' === $existing['area'] ) {
-				return $areas;
-			}
-		}
-		$areas[] = array(
-			'area'        => 'woocommerce',
-			'label'       => __( 'WooCommerce', 'envosta' ),
-			'description' => __( 'Template parts used by WooCommerce blocks — product add-to-cart variants and similar.', 'envosta' ),
-			'icon'        => 'cart',
-			'area_tag'    => 'div',
-		);
-		return $areas;
-	}
-endif;
-add_filter( 'default_wp_template_part_areas', 'envosta_register_woo_template_part_area' );
