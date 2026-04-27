@@ -468,32 +468,32 @@
 			"title": "Footer"
 		},
 		{
-			"area": "uncategorized",
+			"area": "woocommerce",
 			"name": "external-product-add-to-cart-with-options",
-			"title": "External Product Add to Cart With Options"
+			"title": "Product — External"
 		},
 		{
-			"area": "uncategorized",
+			"area": "woocommerce",
 			"name": "grouped-product-add-to-cart-with-options",
-			"title": "Grouped Product Add to Cart With Options"
+			"title": "Product — Grouped"
 		},
 		{
-			"area": "uncategorized",
+			"area": "woocommerce",
 			"name": "simple-product-add-to-cart-with-options",
-			"title": "Simple Product Add to Cart With Options"
+			"title": "Product — Simple"
 		},
 		{
-			"area": "uncategorized",
+			"area": "woocommerce",
 			"name": "variable-product-add-to-cart-with-options",
-			"title": "Variable Product Add to Cart With Options"
+			"title": "Product — Variable"
 		},
 		{
-			"area": "uncategorized",
+			"area": "drawers",
 			"name": "mini-cart",
 			"title": "Mini Cart"
 		},
 		{
-			"area": "mobile-menu",
+			"area": "drawers",
 			"name": "mobile-menu",
 			"title": "Mobile Menu"
 		}
