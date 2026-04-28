@@ -2,7 +2,7 @@
 /**
  * Title: Header — Shop, Centered Nav (Sticky)
  * Slug: envosta/header-shop-centered
- * Categories: woocommerce, header
+ * Categories: header
  * Block Types: core/template-part/header
  * Description: Sticky shop header with the logo on the left, navigation in the middle, and the WooCommerce mini-cart on the right. On tablet and mobile, the nav becomes a hamburger that slides in from the left, with the logo centered and the mini-cart on the right. Has a subtle blurred background when scrolled past the header.
  *

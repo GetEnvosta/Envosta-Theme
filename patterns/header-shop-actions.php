@@ -2,7 +2,7 @@
 /**
  * Title: Header — Shop, Right-Aligned Actions
  * Slug: envosta/header-shop-actions
- * Categories: woocommerce, header
+ * Categories: header
  * Block Types: core/template-part/header
  * Description: Shop header with the logo and site title aligned to the left. Navigation, a primary call-to-action button, and the WooCommerce mini-cart are all aligned to the right. The CTA button is hidden on small screens to keep the action group compact.
  *
