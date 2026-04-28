@@ -146,6 +146,9 @@ include dirname( __FILE__ ) . '/inc/block-defaults.php';
 // Mobile menu block styles: Push / Slide-Over / Slide-Down
 include dirname( __FILE__ ) . '/inc/mobile-menu.php';
 
+// Server-side visibility utilities: .hide-logged-in / .hide-logged-out
+include dirname( __FILE__ ) . '/inc/visibility.php';
+
 // Pattern categories (Site / Blog / WooCommerce) shown in the FSE sidebar.
 // WooCommerce only appears when WC is active.
 include dirname( __FILE__ ) . '/inc/pattern-categories.php';
