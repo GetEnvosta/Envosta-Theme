@@ -127,3 +127,29 @@ if ( ! function_exists( 'envosta_unregister_woo_patterns' ) ) :
 	}
 endif;
 add_action( 'init', 'envosta_unregister_woo_patterns', 20 );
+
+/**
+ * Strip WooCommerce's custom template-part areas from the Site Editor.
+ *
+ * WC registers two custom areas of its own when active:
+ *   - mini-cart
+ *   - add-to-cart-with-options
+ *
+ * That makes the editor sidebar show "Mini-Cart" and "Add to Cart
+ * with Options" as standalone area buckets, even though we've told
+ * theme.json to put those parts in 'overlays' / 'uncategorized'.
+ *
+ * Run this filter at high priority so it executes AFTER WC adds its
+ * own areas, then drop them from the list. Our theme.json area
+ * assignments take effect and the parts group where we want.
+ */
+if ( ! function_exists( 'envosta_strip_woo_template_part_areas' ) ) :
+	function envosta_strip_woo_template_part_areas( $areas ) {
+		$drop = array( 'mini-cart', 'add-to-cart-with-options' );
+		return array_values( array_filter( $areas, function ( $area ) use ( $drop ) {
+			$slug = is_array( $area ) && isset( $area['area'] ) ? $area['area'] : '';
+			return ! in_array( $slug, $drop, true );
+		} ) );
+	}
+endif;
+add_filter( 'default_wp_template_part_areas', 'envosta_strip_woo_template_part_areas', 99 );
