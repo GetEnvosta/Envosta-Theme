@@ -29,29 +29,43 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! function_exists( 'envosta_register_mobile_menu_styles' ) ) :
 	function envosta_register_mobile_menu_styles() {
-		// Three mobile menu drawer variants. Apply any of these to a
+		// Five overlay drawer variants. Apply any of these to a
 		// core/navigation block and the auto-generated hamburger button
 		// will open the Envosta drawer (mobile-menu template part)
 		// instead of WP's native responsive overlay.
 		//
 		// To keep WP's NATIVE responsive overlay (just the nav links,
-		// no extra content), simply leave the navigation block on the
-		// default style.
-		register_block_style( 'core/navigation', array(
-			'name'  => 'push',
-			'label' => __( 'Push', 'envosta' ),
-		) );
-		register_block_style( 'core/navigation', array(
-			'name'  => 'slide-over',
-			'label' => __( 'Slide Over', 'envosta' ),
-		) );
-		register_block_style( 'core/navigation', array(
-			'name'  => 'slide-down',
-			'label' => __( 'Slide Down', 'envosta' ),
-		) );
+		// no extra content), leave the navigation block on the default
+		// style. Width can be tuned by adding `size-25`, `size-50`, or
+		// `size-75` to the block's Additional CSS class field; the
+		// default is full screen.
+		envosta_overlay_block_styles( 'core/navigation' );
 	}
 endif;
 add_action( 'init', 'envosta_register_mobile_menu_styles' );
+
+/**
+ * Helper: register the 5 overlay direction block styles on a given block.
+ * Used for both core/navigation (always) and woocommerce/mini-cart (when
+ * WC is active).
+ */
+if ( ! function_exists( 'envosta_overlay_block_styles' ) ) :
+	function envosta_overlay_block_styles( $block_name ) {
+		$styles = array(
+			'push-right' => __( 'Push Right', 'envosta' ),
+			'push-left'  => __( 'Push Left', 'envosta' ),
+			'slide-right'=> __( 'Slide Right', 'envosta' ),
+			'slide-left' => __( 'Slide Left', 'envosta' ),
+			'slide-down' => __( 'Slide Down', 'envosta' ),
+		);
+		foreach ( $styles as $name => $label ) {
+			register_block_style( $block_name, array(
+				'name'  => $name,
+				'label' => $label,
+			) );
+		}
+	}
+endif;
 
 /* ---------------------------------------------------------------------------
  * 2. Custom template-part area so the editor groups the Mobile Menu part
@@ -164,7 +178,7 @@ if ( ! function_exists( 'envosta_render_mobile_menu_drawer' ) ) :
 	function envosta_render_mobile_menu_drawer() {
 		if ( is_admin() ) return;
 
-		$default_direction = apply_filters( 'envosta_mobile_menu_default_direction', 'slide-over' );
+		$default_direction = apply_filters( 'envosta_mobile_menu_default_direction', 'slide-left' );
 
 		// Mobile menu overlay.
 		envosta_render_overlay_drawer(
@@ -177,7 +191,7 @@ if ( ! function_exists( 'envosta_render_mobile_menu_drawer' ) ) :
 
 		// Mini-cart overlay — only when WooCommerce is active.
 		if ( class_exists( 'WooCommerce' ) ) {
-			$cart_default_direction = apply_filters( 'envosta_mini_cart_default_direction', 'slide-over' );
+			$cart_default_direction = apply_filters( 'envosta_mini_cart_default_direction', 'slide-left' );
 			envosta_render_overlay_drawer(
 				'mini-cart',
 				$cart_default_direction,
@@ -201,18 +215,7 @@ add_action( 'wp_footer', 'envosta_render_mobile_menu_drawer', 50 );
 if ( ! function_exists( 'envosta_register_mini_cart_styles' ) ) :
 	function envosta_register_mini_cart_styles() {
 		if ( ! class_exists( 'WooCommerce' ) ) return;
-		register_block_style( 'woocommerce/mini-cart', array(
-			'name'  => 'push',
-			'label' => __( 'Push', 'envosta' ),
-		) );
-		register_block_style( 'woocommerce/mini-cart', array(
-			'name'  => 'slide-over',
-			'label' => __( 'Slide Over', 'envosta' ),
-		) );
-		register_block_style( 'woocommerce/mini-cart', array(
-			'name'  => 'slide-down',
-			'label' => __( 'Slide Down', 'envosta' ),
-		) );
+		envosta_overlay_block_styles( 'woocommerce/mini-cart' );
 	}
 endif;
 add_action( 'init', 'envosta_register_mini_cart_styles', 20 );

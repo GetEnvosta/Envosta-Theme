@@ -1,25 +1,23 @@
 /**
  * Envosta — Overlay drawer system (template-part backed).
  *
- * Companion to inc/mobile-menu.php. Renders one drawer per registered
- * overlay (mobile-menu, mini-cart, ...) into wp_footer. Any clickable
- * element with [data-envosta-overlay-open="<slug>"] (and an optional
- * [data-direction="push|slide-over|slide-down"]) opens the matching
- * drawer.
+ * Companion to inc/mobile-menu.php. One drawer per overlay slug
+ * (mobile-menu, mini-cart, ...) is rendered into wp_footer. Triggers
+ * route to the matching drawer and direction.
  *
- * Backwards-compatible: [data-envosta-mobile-menu-open] still works
- * and routes to the 'mobile-menu' overlay.
- *
- *   • Click on a trigger → open the matching drawer with the
- *     requested direction.
- *   • Click on [data-envosta-mobile-menu-close] (close button or
- *     backdrop) → animate out, then hide.
- *   • Escape → close any open drawer.
- *   • Focus moves to the close button on open and back to the trigger
- *     on close.
+ *   • Trigger: any element with [data-envosta-overlay-open="<slug>"]
+ *     and an optional [data-direction="push-right|push-left|
+ *     slide-right|slide-left|slide-down"]. May also carry a size
+ *     class ("size-25" / "size-50" / "size-75") which is forwarded
+ *     to the drawer to scale width or height.
+ *   • Close: [data-envosta-mobile-menu-close], Escape, or backdrop.
  *   • Body gets `envosta-mobile-menu-open` while any drawer is open
- *     so CSS can lock scroll. Push variants also get
- *     `envosta-mobile-menu-push-active` so the page canvas slides.
+ *     so CSS can lock scroll. Push variants additionally get
+ *     `envosta-mobile-menu-push-right-active` or `-push-left-active`
+ *     so the page canvas slides by --envosta-overlay-size.
+ *
+ * Backwards-compatible: [data-envosta-mobile-menu-open] still routes
+ * to the 'mobile-menu' overlay.
  *
  * @package Envosta
  */
@@ -29,7 +27,8 @@
 
 	if ( typeof document === 'undefined' ) return;
 
-	var DIRECTIONS = [ 'push', 'slide-over', 'slide-down' ];
+	var DIRECTIONS = [ 'push-right', 'push-left', 'slide-right', 'slide-left', 'slide-down' ];
+	var SIZES      = [ 'size-25', 'size-50', 'size-75', 'size-100' ];
 	var SAFETY_MS  = 400;
 
 	function getDrawer( slug ) {
@@ -49,15 +48,25 @@
 		drawer.classList.add( 'is-style-' + direction );
 	}
 
+	function setSize( drawer, size ) {
+		SIZES.forEach( function ( s ) {
+			drawer.classList.remove( s );
+		} );
+		if ( size && SIZES.indexOf( size ) !== -1 ) {
+			drawer.classList.add( size );
+		}
+	}
+
 	var lastTrigger = null;
 
-	function openDrawer( slug, direction, trigger ) {
+	function openDrawer( slug, direction, size, trigger ) {
 		var drawer = getDrawer( slug );
 		if ( ! drawer ) return;
 
 		lastTrigger = trigger || null;
 
 		setDirection( drawer, direction );
+		setSize( drawer, size );
 
 		drawer.hidden = false;
 		// Force layout flush so the entry animation runs.
@@ -69,9 +78,16 @@
 		drawer.setAttribute( 'aria-hidden', 'false' );
 		document.body.classList.add( 'envosta-mobile-menu-open' );
 
-		// Push variant: slide the page canvas out.
-		if ( drawer.classList.contains( 'is-style-push' ) ) {
-			document.body.classList.add( 'envosta-mobile-menu-push-active' );
+		// Push variants slide the page canvas. Mirror the size variable
+		// onto <body> so the canvas-push CSS knows how far to translate.
+		if ( drawer.classList.contains( 'is-style-push-right' ) ) {
+			document.body.classList.add( 'envosta-mobile-menu-push-right-active' );
+		} else if ( drawer.classList.contains( 'is-style-push-left' ) ) {
+			document.body.classList.add( 'envosta-mobile-menu-push-left-active' );
+		}
+		var size_var = getComputedStyle( drawer ).getPropertyValue( '--envosta-overlay-size' ).trim();
+		if ( size_var ) {
+			document.body.style.setProperty( '--envosta-overlay-size', size_var );
 		}
 
 		var closeBtn = drawer.querySelector( '.envosta-mobile-menu-drawer__close' );
@@ -94,6 +110,7 @@
 			drawer.setAttribute( 'aria-hidden', 'true' );
 			drawer.hidden = true;
 			document.body.classList.remove( 'envosta-mobile-menu-open' );
+			document.body.style.removeProperty( '--envosta-overlay-size' );
 
 			if ( lastTrigger && typeof lastTrigger.focus === 'function' ) {
 				try { lastTrigger.focus( { preventScroll: true } ); } catch ( e ) { lastTrigger.focus(); }
@@ -103,7 +120,10 @@
 
 		// Trigger canvas slide-back BEFORE the panel exit animation
 		// starts so both run in lockstep.
-		document.body.classList.remove( 'envosta-mobile-menu-push-active' );
+		document.body.classList.remove(
+			'envosta-mobile-menu-push-right-active',
+			'envosta-mobile-menu-push-left-active'
+		);
 
 		drawer.classList.add( 'envosta-closing' );
 
@@ -116,18 +136,17 @@
 	/* -- Events -------------------------------------------------------- */
 
 	document.addEventListener( 'click', function ( event ) {
-		// Open trigger — supports both new attr and legacy attr.
 		var openTrigger = event.target.closest( '[data-envosta-overlay-open], [data-envosta-mobile-menu-open]' );
 		if ( openTrigger ) {
 			event.preventDefault();
 			var slug = openTrigger.getAttribute( 'data-envosta-overlay-open' )
 				|| ( openTrigger.hasAttribute( 'data-envosta-mobile-menu-open' ) ? 'mobile-menu' : '' );
 			var dir  = openTrigger.getAttribute( 'data-direction' );
-			openDrawer( slug, dir, openTrigger );
+			var size = openTrigger.getAttribute( 'data-size' );
+			openDrawer( slug, dir, size, openTrigger );
 			return;
 		}
 
-		// Close trigger.
 		var closeTrigger = event.target.closest( '[data-envosta-mobile-menu-close]' );
 		if ( closeTrigger ) {
 			event.preventDefault();

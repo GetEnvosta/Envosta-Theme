@@ -433,12 +433,12 @@ input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=range]
    part inside) instead of WP's bare responsive overlay. Author flow:
    apply the style, the auto-rendered hamburger triggers our drawer.
    ========================================================================= */
-@keyframes envosta-push-in        { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-@keyframes envosta-push-out       { from { transform: translateX(0); }    to { transform: translateX(-100%); } }
-@keyframes envosta-slide-over-in  { from { transform: translateX(100%); }  to { transform: translateX(0); } }
-@keyframes envosta-slide-over-out { from { transform: translateX(0); }     to { transform: translateX(100%); } }
-@keyframes envosta-slide-down-in  { from { transform: translateY(-100%); } to { transform: translateY(0); } }
-@keyframes envosta-slide-down-out { from { transform: translateY(0); }    to { transform: translateY(-100%); } }
+@keyframes envosta-slide-from-left-in   { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes envosta-slide-from-left-out  { from { transform: translateX(0); }    to { transform: translateX(-100%); } }
+@keyframes envosta-slide-from-right-in  { from { transform: translateX(100%); }  to { transform: translateX(0); } }
+@keyframes envosta-slide-from-right-out { from { transform: translateX(0); }     to { transform: translateX(100%); } }
+@keyframes envosta-slide-from-top-in    { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes envosta-slide-from-top-out   { from { transform: translateY(0); }    to { transform: translateY(-100%); } }
 
 
 /* =========================================================================
@@ -718,11 +718,20 @@ body.envosta-cart-open {
 .envosta-mobile-menu-drawer.envosta-closing .envosta-mobile-menu-drawer__backdrop {
 	background: rgba(0, 0, 0, 0);
 }
+/* Coverage: how much of the screen the drawer takes up.
+   Default 100%. Override by adding `size-25`, `size-50`, or `size-75`
+   to the navigation / mini-cart block's Additional CSS class field. */
+.envosta-mobile-menu-drawer            { --envosta-overlay-size: 100%; }
+.envosta-mobile-menu-drawer.size-25    { --envosta-overlay-size: 25%; }
+.envosta-mobile-menu-drawer.size-50    { --envosta-overlay-size: 50%; }
+.envosta-mobile-menu-drawer.size-75    { --envosta-overlay-size: 75%; }
+.envosta-mobile-menu-drawer.size-100   { --envosta-overlay-size: 100%; }
+
 .envosta-mobile-menu-drawer__panel {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 100vw;
+	width: var(--envosta-overlay-size);
 	height: 100dvh;
 	background: var(--wp--preset--color--theme-1, #fff);
 	color: var(--wp--preset--color--theme-4, #1e1e1e);
@@ -758,58 +767,74 @@ body.envosta-cart-open {
 	min-height: 0;
 }
 
-/* All three variants use the full viewport. The only difference between
-   them is the entry/exit direction. */
+/* Five directional variants. Direction word = where the content
+   moves during the animation.
+     - push-right / push-left:  panel + page canvas both move
+     - slide-right / slide-left: only the panel moves
+     - slide-down: panel drops from the top */
 
-/* -- Slide-Over (default): full viewport from the right ------------------ */
-.envosta-mobile-menu-drawer.is-style-slide-over .envosta-mobile-menu-drawer__panel {
-	right: 0;
+/* -- Push Right: panel from left, canvas pushed right -------------------- */
+.envosta-mobile-menu-drawer.is-style-push-right .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-right .envosta-mobile-menu-drawer__panel {
 	left: 0;
+	right: auto;
 }
-.envosta-mobile-menu-drawer.is-style-slide-over.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-over-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
+.envosta-mobile-menu-drawer.is-style-push-right.is-open .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-right.is-open .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-from-left-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
-.envosta-mobile-menu-drawer.is-style-slide-over.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-over-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
+.envosta-mobile-menu-drawer.is-style-push-right.envosta-closing .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-right.envosta-closing .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-from-left-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-/* -- Push: full viewport from the left, page canvas slides out ----------- */
-.envosta-mobile-menu-drawer.is-style-push .envosta-mobile-menu-drawer__panel {
-	left: 0;
+/* -- Push Left: panel from right, canvas pushed left --------------------- */
+.envosta-mobile-menu-drawer.is-style-push-left .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-left .envosta-mobile-menu-drawer__panel {
 	right: 0;
+	left: auto;
 }
-.envosta-mobile-menu-drawer.is-style-push.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-push-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
+.envosta-mobile-menu-drawer.is-style-push-left.is-open .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-left.is-open .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-from-right-in 0.36s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
-.envosta-mobile-menu-drawer.is-style-push.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-push-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
+.envosta-mobile-menu-drawer.is-style-push-left.envosta-closing .envosta-mobile-menu-drawer__panel,
+.envosta-mobile-menu-drawer.is-style-slide-left.envosta-closing .envosta-mobile-menu-drawer__panel {
+	animation: envosta-slide-from-right-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-/* -- Slide-Down: full viewport from the top ------------------------------ */
+/* -- Slide Down: panel from top, height = size (default 100%) ----------- */
 .envosta-mobile-menu-drawer.is-style-slide-down .envosta-mobile-menu-drawer__panel {
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: auto;
+	width: 100vw;
+	height: var(--envosta-overlay-size);
 }
 .envosta-mobile-menu-drawer.is-style-slide-down.is-open .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-down-in 0.40s cubic-bezier(0.32, 0.72, 0, 1) both;
+	animation: envosta-slide-from-top-in 0.40s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 .envosta-mobile-menu-drawer.is-style-slide-down.envosta-closing .envosta-mobile-menu-drawer__panel {
-	animation: envosta-slide-down-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
+	animation: envosta-slide-from-top-out 0.32s cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-/* -- Push: page canvas slide --------------------------------------------- */
+/* -- Push variants: page canvas slide ------------------------------------ */
 /* Direct children of <body> get a transform transition so the canvas
-   slides out and back in perfectly smoothly. We can't transform <body>
-   itself because that would create a containing block for our fixed
-   drawer (which would then move with it and disappear offscreen). */
+   slides out and back smoothly. We don't transform <body> itself —
+   that would create a containing block for our position:fixed drawer
+   and move it offscreen too. The size variable is mirrored onto
+   <body> by the drawer JS so the canvas pushes by exactly the panel's
+   width. */
 body > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
 	transition: transform 0.36s cubic-bezier(0.32, 0.72, 0, 1);
 	will-change: auto;
 }
-body.envosta-mobile-menu-push-active > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
-	transform: translateX(100vw);
+body.envosta-mobile-menu-push-right-active > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
+	transform: translateX(var(--envosta-overlay-size, 100%));
+}
+body.envosta-mobile-menu-push-left-active > *:not(.envosta-mobile-menu-drawer):not(script):not(style):not(link) {
+	transform: translateX(calc(var(--envosta-overlay-size, 100%) * -1));
 }
 
 /* Lock body scroll while the drawer is open. */
