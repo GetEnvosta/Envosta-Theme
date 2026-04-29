@@ -1060,3 +1060,57 @@ body.envosta-mobile-menu-open {
 .wp-block-cover.is-style-grainy > .wp-block-cover__inner-container {
 	z-index: 2;
 }
+
+/* =========================================================================
+   Scroll-aware utility classes
+
+   Add any of these to a block via "Advanced → Additional CSS class".
+   Companion to assets/js/scroll-effects.js, which keeps the body's
+   .is-scrolled / .is-scrolling-down classes in sync with the user's
+   scroll position so all rules below are pure CSS.
+
+     .envosta-sticky               sticky to the top of the viewport
+     .envosta-opaque-on-scroll     transparent at top, gains a
+                                   background + soft border + blur
+                                   once the user scrolls
+     .envosta-hide-on-scroll-down  hides going down, reappears on up
+                                   (Smashing-Mag pattern; pair with
+                                   .envosta-sticky for a header that
+                                   slides out of the way)
+   ========================================================================= */
+.envosta-sticky {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.envosta-opaque-on-scroll {
+	transition:
+		background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		backdrop-filter 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		-webkit-backdrop-filter 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+body.is-scrolled .envosta-opaque-on-scroll {
+	background-color: color-mix(in srgb, var(--wp--preset--color--theme-1, #fff) 88%, transparent);
+	-webkit-backdrop-filter: saturate(160%) blur(14px);
+	backdrop-filter: saturate(160%) blur(14px);
+	box-shadow: 0 1px 0 color-mix(in srgb, var(--wp--preset--color--theme-4, #1e1e1e) 8%, transparent);
+}
+
+.envosta-hide-on-scroll-down {
+	transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+	will-change: transform;
+}
+body.is-scrolling-down .envosta-hide-on-scroll-down {
+	transform: translateY(-100%);
+}
+
+/* Don't animate any of these if the user prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+	.envosta-opaque-on-scroll,
+	.envosta-hide-on-scroll-down {
+		transition: none !important;
+	}
+}
